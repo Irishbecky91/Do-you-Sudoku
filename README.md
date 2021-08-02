@@ -38,7 +38,7 @@ This website was made for the second of five Milestone projects required to comp
 
 The main requirements of this project are to build a responsive and interactive front-end site all the technologies learned so far, namely HTML5, CSS3 and JavaScript.
 
-[Back to top ⇧](#Do You Sudoku?)
+[Back to top ⇧](#)
 
 ## UX
 ### Ideal User Demographic
