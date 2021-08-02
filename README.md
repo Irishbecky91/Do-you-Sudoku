@@ -90,7 +90,7 @@ With the above information in mind, a strategy table was created to show the tra
 <details>
 <summary>Strategy Plane - Viability/Feasibility Table</summary>
 
-![Strategy Table](assets/readme-files/strategy-table.png)
+![Strategy Table](assets/readme-files/strategy-table.PNG)
 
 </details>
 
