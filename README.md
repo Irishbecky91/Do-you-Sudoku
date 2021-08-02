@@ -1,104 +1,492 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Survival Guild
 
-Welcome USER_NAME,
+![Survival Guild Mockup Images](assets/readme-files/survival-guild.PNG)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. The last update to this file was: **July 2, 2021**
+[View the live project here](https://irishbecky91.github.io/survival-guild/)
 
-## Gitpod Reminders
+## Table of contents
+1. [Introduction](#Introduction)
+2. [UX](#UX)
+    1. [Ideal User Demographic](#Ideal-User-Demographic)
+    2. [User Stories](#User-Stories)
+    3. [Development Planes](#Development-Planes)
+    4. [Design](#Design)
+3. [Features](#Features)
+    1. [Design Features](#Design-Features) 
+    2. [Existing Features](#Existing-Features)
+    3. [Features to Implement in the future](#Features-to-Implement-in-the-future)
+4. [Issues and Bugs](#Issues-and-Bugs)
+5. [Technologies Used](#Technologies-Used)
+     1. [Main Languages Used](#Main-Languages-Used)
+     3. [Frameworks, Libraries & Programs Used](#Frameworks,-Libraries-&-Programs-Used)
+6. [Testing](#Testing)
+     1. [Testing.md](TESTING.md)
+7. [Deployment](#Deployment)
+     1. [Deploying on GitHub Pages](#Deploying-on-GitHub-Pages)
+8. [Credits](#Credits)
+     1. [Content](#Content)
+     2. [Media](#Media)
+     3. [Code](#Code)
+9. [Acknowledgements](#Acknowledgements)
+***
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Introduction
 
-`python3 -m http.server`
+This comprehensive website was made to provide information regarding a fictional zombie apocalypse infecting 95% of the world's population. The target audience is the people of Ireland, one of the few remaining infection-free zones. 
 
-A blue button should appear to click: _Make Public_,
+<details>
+<summary>Map of Infected Zones</summary>
 
-Another blue button should appear to click: _Open Browser_.
+![Map showing Infected Zones](assets/readme-files/infected-zones.png)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+</details>
 
-A blue button should appear to click: _Make Public_,
+The idea for the site is based upon a fictional story, created by the developer. In this fictional world, COVID-19 has mutated upon coming into contact with a fungus named Ophiocordyceps unilateralis (Nicknamed the "Zombie Ant Fungus") in Southern Thailand. This combination has produced a group of infected individuals who resemble zombies with a hive mentality and a hunger for flesh. The mutation has spread to all corners of the globe save for a few infection-free zones, one of which is Ireland.
 
-Another blue button should appear to click: _Open Browser_.
+This website was made for the first of five Milestone projects required to complete the Diploma in Software development (eCommerce Applications) program at The Code Institute. 
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+The main requirements of this project are to build a responsive and static front-end site to present useful information to users using all the technologies learned so far, namely HTML5 and CSS3. The site is to contain no less than three pages.
 
-To log into the Heroku toolbelt CLI:
+[Back to top ⇧](#Survival-Guild)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## UX
+### Ideal User Demographic
+The ideal user for this website is:
+* Current user
+* New user
+* Survivalist
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### User-Stories
+#### Current User Goals
+1. As a current user, I want to see regular updates to the information and breaking news on the home page as the situation develops.
+2. As a current user, I want to easily navigate through the site and access the information I require with ease.
+3. As a current user, I want to easily navigate to content I have previously viewed within a small number of steps.
 
-------
+#### New User Goals
+1. As a new user, I want to easily navigate the entire site intuitively. 
+2. As a new user, I want the information I seek to be easily accessible and relevant.
+3. As a new user, I want attractive and relevant visuals and colour schemes that work with the content.
 
-## Release History
+#### Survivalist Goals
+1. As a survivalist, I want to factually correct and relevant information.
+2. As a survivalist, I want the information I seek to be easily accessible and relevant.
+3. As a survivalist, I want to see instructional images and/or videos with user controls relevant to the information.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### Development-Planes
+To create a comprehensive website that answers the above user stories and identifies the functionality of the site, the developer must develop all aspects of the fictional world for which the website is being created for. This includes a background story, a breaking news feed, survival information and creating a how-to-guide to defend against infected individuals.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+#### Strategy
+Strategy incorporates user needs as well as product objectives. This website will focus on the following target audience, divided into three main categories:
+- **Roles:**
+    - Current users
+    - New users
+    - Experienced survivalists
+    - Beginner survivalists
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+- **Demographic:**
+    - All ages
+    - Irish or residing in Ireland
+    - Beginner to experienced Preppers/Survivalists
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+- **Psychographic:**
+    - Lifestyles:
+        - Interest in Nature
+        - Active
+    - Personality/Attitudes:
+        - Outgoing
+        - Focused
+        - Creative
+    - Values:
+        - Environmentally friendly
+        - Sense of community
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+The website needs to enable the **user** to:
+- Retrieve the desired information:
+    - Survival/hunting/gathering guide
+    - Camp building and fortification guide
+    - Backpack essentials
+    - Tips and techniques for defending against the Infected
+    - Recommended equipment (hunting/tools/weapons/armor/etc.)
+    - Report suspected cases for a referral.
+    
+The website needs to enable the **site manager** to:
+- Gather reports of suspected cases for a referral.
+- Gather entries for the competition draw.
+    
+With the above information in mind, a strategy table was created to show the trade-offs between what is important and what is viable with the following results.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+<details>
+<summary>Strategy Plane - Viability/Feasibility Table</summary>
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+![Strategy Table](assets/readme-files/strategy-table.png)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+</details>
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+#### Scope
+The scope plane is about defining requirements based on the goals established on the strategy plane. Using the information in the strategy plane, the identified required features have been broken into the following two categories.
+- Content Requirements:
+    - The user will be looking for:
+        - Information on the global situation
+        - Survival tips
+        - Camp setup tips
+        - Recommendations for equipment
+        - Tips and techniques for killing the Infected
+        - Backpack essentials
+- Functionality Requirements:
+    - The user will be able to:
+        - Be able to easily navigate the site to find the information they require.
+        - Be able to contact the site to report possible cases of infection.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+#### Structure
+The information above was then organized in a hierarchical tree structure, a site map, showing how users can navigate through the site with ease and efficiency, with the following results:
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+<details>
+<summary>Site Map</summary>
 
-------
+![Site Map](assets/readme-files/sitemap.png)
 
-## FAQ about the uptime script
+</details>
 
-**Why have you added this script?**
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+#### Skeleton
+Wireframes were made to showcase the appearance of the site pages while keeping a positive user experience in mind. The wireframes were created using a desktop version of [Balsamiq](https://balsamiq.com/).
 
-**How will this affect me?**
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+<details>
+<summary>Balsamiq Wireframes</summary>
+    
+![Site Wireframes](assets/readme-files/wireframe-all-pages.png)
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+</details>    
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
 
-**So….?**
+In addition to this, concept art was made using [Figma] (https://www.figma.com/) to showcase the appearance of the home page. The concept art made some improvements upon the initial wireframes with regards to layout and features. but stayed mostly true to the original design.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
 
-**Can I opt out?**
+<details>
+<summary>Figma Concept Art</summary>
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+![Homepage Detailed Wireframe](assets/readme-files/figma-homepage-mobile.PNG)
+![Homepage Detailed Wireframe](assets/readme-files/figma-homepage-desktop.PNG)
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+</details>
 
-**Anything more?**
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+### Design
+#### Colour Scheme
+Using the [Colourmind](http://colormind.io/template/material-dashboard/) colour palette generator, the colour scheme chosen is based on the colour Hazard Yellow. This is complemented by a very light green colour named Snow Drift, a light green close to Spring Rain, a red colour close to Deep Chestnut, and a medium-dark shade of cyan. The deep checstnut colour's opacity was altered to produce a lighter shade for the background (#E2DDDC).
 
----
+This colour palette was chosen based on the colour Hazard Yellow, which is used on all hazardous materials and signs. The colour represents the danger presented by the infected individuals in the fictional story.
 
-Happy coding!
+All content text is charcoal-coloured {#383838) as this colour compliments the other colours on the site while still taking into account those who may be visually impaired.
+
+
+<details>
+<summary>Colour Palette</summary>
+
+![Colour Palette](assets/readme-files/colour-palette.png)
+
+</details>
+
+
+#### Typography
+The typography pairing used on the site are [Open Sans](https://fonts.google.com/specimen/Open+Sans?query=open), [Special Elite](https://fonts.google.com/specimen/Special+Elite?query=speci) and [Oswald](https://fonts.google.com/specimen/Oswald?query=osw), imported from [Google Fonts](https://fonts.google.com/). A backup of Sans-Serif had been applied in case of import failure.
+
+Special Elite was chosen for the title on the header, with a slogan underneath using the font Oswald. Oswald will be used for headings, with Open Sans being used for standard text.
+
+#### Imagery
+The selected imagery has been sourced and created from various sites. Fake news reports and Twitter feeds will feature on the home page in a news feed style setup. 
+
+Images of "The Infected" have been sourced from a freelance concept artist, [Soufiane Idrassi](https://www.artstation.com/cgsoufiane), through the website [Art Station](https://www.artstation.com/). 
+
+Various images, found in the [readme-files](assets/readme-files) folder, have been gathered for use across the site. These range from images of weapons to camping equipment.
+
+[Back to top](#Survival-Guild)
+
+## Features
+### Design Features
+Each page within the site has a consistent and responsive navigation system. The details of features on the site are detailed below.
+- The **Header** is across the top of the page. It is not static as this would cover too much of the screen. A back-to-top button was implemented instead so users can access the navigation bar quickly.
+- The **Navigation Bar** is positioned directly below the header. The navigation bar is only used for screen sizes larger than 1200px. It is then replaced by a hamburger menu.
+- The **Navigation Bar** collapses into a **Hamburger Menu** that, when clicked or tapped, opens a sidebar which shows the navigation options.
+- The **Footer** is 100% in width and 40px in height. It stays at the bottom of the screen at all times, on all screen sizes. Each social media link opens in a new tab. Additionally, each social media link opens a zombie related link on each respective website; eg. the Facebook icon links to the Facebook page for [The Zombie Survival Guide book](https://www.facebook.com/TheZombieSurvivalGuide/).
+
+<dl>
+    <dt><a href="index.html" target="_blank" alt="Survival Guild Home Page">Home Page</a></dt>
+    <dd>
+        The <em>Home Page</em> is a scrollable page with the main content divided into two columns on larger screens, shifting into a single column on smaller screens.
+        <ul>
+            <li>
+                <em>Introduction</em> - This text-only section introduces the user to the page. 
+            </li>
+            <li>
+                <em>Competition Banner</em> - Covering 100% of the width of the screen, the competition banner is not static and moves with the page. Clicking on the image will bring you directly to the Competition Page.
+            </li>
+            <li>
+                <em>Content</em> - The World News section is a text-only column to the left of the screen on larger screen sizes. Below this is the Twitter Feed, a heading and image only column, which is another column kept to the right of the screen on larger screen sizes. The News Feed section, a text and image column, keeps to the right on larger screen sizes. On smaller screen sizes, each section expands and becomes a single long column. The order from top to bottom is World News, News Feed, and finally the Twitter Feed section. 
+            </li>
+            <li>
+                <em>Back-to-top Button</em> - A Back-to-top button is on the bottom right of the screen, above the footer. This button will bring the user back to the top of the page from any point on the page. 
+            </li>
+        </ul>
+    </dd>
+</dl>
+<dl>
+    <dt><a href="survival-tips.html" target="_blank" alt="Survival Guild - Survival Tips Page">Survival Tips Page</a></dt>
+    <dd>
+        The <em>Survival Tips Page</em> is a scrollable page with the main content laid out in a single column, regardless of screen size.
+        <ul>
+            <li>
+                <em>Introduction</em> - This text-only section introduces the user to the page. 
+            </li>
+            <li>
+                <em>Page Section Buttons</em> - There are three buttons that will bring the user to each of the sections on the page. This allows the user to get to the information they require quicker with less scrolling.
+            </li>
+            <li>
+                <em>Competition Banner</em> - Covering 100% of the width of the screen, the competition banner is not static and moves with the page. Clicking on the image will bring you directly to the Competition Page.
+            </li>
+            <li>
+                <em>Content</em> - The content is made up of <em>text</em>, <em>images</em> and some <em>videos</em> embedded from YouTube. The images and videos change size following the screen size to provide a better user experience.
+            </li>
+            <li>
+                <em>Back-to-top Button</em> - A Back-to-top button is on the bottom right of the screen, above the footer. This button will bring the user back to the top of the page from any point on the page. 
+            </li>
+        </ul>
+    </dd>
+</dl>
+<dl>
+    <dt><a href="camp-setup.html" target="_blank" alt="Survival Guild - Camp Setup Page">Camp Setup Page</a></dt>
+    <dd>
+        The <em>Camp Setup Page</em> has all the same features as the Survival Tips Page, only with fewer videos embedded.
+    </dd>
+</dl>
+<dl>    
+    <dt><a href="infected.html" target="_blank" alt="Survival Guild - The Infected Page">The Infected Page</a></dt>
+    <dd>
+        <em>The Infected Page</em> has all the same features as the Survival Tips Page, but without videos embedded and with only two Page Section Buttons.
+    </dd>
+</dl>
+<dl>
+    <dt><a href="contact.html" target="_blank" alt="Survival Guild - Contact Page">Contact Page</a></dt>
+    <dd>
+        The <em>Contact Page</em> is a scrollable page with two columns of content, which become a single column on smaller screen sizes.
+        <ul>
+            <li>
+                <em>Introduction</em> - This text-only section introduces the user to the page. 
+            </li>
+            <li>
+                <em>Content</em> - The content is made up of <em>text</em>, <em>text input boxes</em> and a <em>map</em> embedded from Google Maps. The telephone number and email have <a> elements that divert the user to their email or phone app, allowing ease of access if they wish to contact the site manager. The map changes size following the screen size to provide a better user experience.
+            </li>
+            <li>
+                <em>Form</em> - The form contains three input boxes for names and email and a text box for the user to enter a message. There is a submit button below these which changes colour when hovered over. Sending a message through this form brings the user to a Thank You Page. 
+            </li>
+        </ul>
+    </dd>
+</dl>
+<dl>    
+    <dt><a href="competition.html" target="_blank" alt="Survival Guild - Competition Page">Competition Page</a></dt>
+    <dd>
+        The <em>Competition Page</em> is a scrollable page with two columns of content, which become a single column on smaller screen sizes.
+        <ul>
+            <li>
+                <em>Introduction</em> - This section has text and one wide image, the same as the competition banner without the link, which introduces the user to the page. 
+            </li>
+            <li>
+                <em>Content</em> - The content is made up of <em>text</em>, <em>text input boxes</em> and a <em>scrollable box</em>, which contains the terms and conditions of the competition, laid out into two columns on larger screens. On smaller screen sizes, the two columns rearrange to make one long column.
+            </li>
+            <li>
+                <em>Form</em> - The form contains four input boxes for names, date of birth and email, and a question and answer using radio buttons to select the correct answer for the competition entry. There is a submit button below these which changes colour when hovered over. Submitting an entry through this form brings the user to a Thank You Page. 
+            </li>
+        </ul>
+    </dd>
+</dl>
+<dl>        
+    <dt><a href="dump-contact.html" target="_blank" alt="Survival Guild - Contact Thank You Page">Contact Thank You Page</a></dt>
+    <dd>
+        The <em>Contact Thank You Page</em> is a single page made to thank the user for contacting the Survival Guild.
+        <ul>
+            <li>
+                <em>Content</em> - The content is made up of <em>text</em> and an <em>image</em>, which thanks the user for submitting a message on the Contact Page.
+            </li>
+        </ul>
+    </dd>
+</dl>
+<dl>        
+    <dt><a href="dump-competition.html" target="_blank" alt="Survival Guild - Competition Thank You Page">Competition Thank You Page</a></dt>
+    <dd>
+        The <em>Competition Thank You Page</em> is a single page made to thank the user for entering the Survival Guild competition.
+        <ul>
+            <li>
+                <em>Content</em> - The content is made up of <em>text</em> and an <em>image</em>, which thanks the user for entering the competition on the Competition Page.
+            </li>
+        </ul>
+    </dd>
+</dl>
+<dl>        
+    <dt><a href="404.html" target="_blank" alt="Survival Guild - 404 - Page Not Found">404 - Page Not Found</a></dt>
+    <dd>
+        The <em>404 Page</em> is a single page that appears when a user enters the wrong address into the address bar. It is made into a mini-game/story style to entertain the user before returning to the main site. Each page in the story has a different background image that relates to the text.
+        <ul>
+            <li>
+                <em>Content</em> - The content is made up of <em>text</em> and <em>links</em>, which allows the user to go directly to the home page or interact with the story.
+            </li>
+        </ul>
+    </dd>
+</dl>
+<dl>
+    <dt><a href="500.html" target="_blank" alt="Survival Guild - 500 - Internal Server Error">500 - Internal Server Error</a></dt>
+    <dd>
+        The <em>500 Page</em> is the same as the 404 page except for a different heading letting the user know there was an internal server error.
+    </dd>
+</dl>
+<dl>    
+    <dt><a href="bike.html" target="_blank" alt="Survival Guild - Page 2 of the Story">Page 2 of the Story</a></dt>
+    <dd>
+        The <em>Second Page</em> in the story is a single page that appears when a user clicks the link to continue the story. Each page in the story has a different background image that relates to the text.
+        <ul>
+            <li>
+                <em>Content</em> - The content is made up of <em>text</em> and <em>links</em>, which allows the user to go directly to the home page or continue interacting with the story.
+            </li>
+        </ul>
+    </dd>
+</dl>
+<dl>    
+    <dt><a href="house.html" target="_blank" alt="Survival Guild - Page 3 of the Story">Page 3 of the Story</a></dt>
+    <dd>
+        The <em>Third Page</em> in the story is a single page that appears when a user clicks the link to continue the story. Each page in the story has a different background image that relates to the text.
+        <ul>
+            <li>
+                <em>Content</em> - The content is made up of <em>text</em> and a single <em>link</em>, which allows the user to go directly to the home page.
+            </li>
+        </ul>
+    </dd>
+</dl>
+
+### Existing Features
+- **Header** - Appearing on almost every page for brand recognition.
+- **Navigation Bar** - Appearing on almost every page for a consistently easy and intuitive navigable system on larger screens.
+- **Hamburger Menu** - Appearing on almost every page for a consistently easy and intuitive navigable system on smaller screens.
+- **Social Media Icons** - Appearing on almost every page, the icons are appropriate representations of the Social Media platforms, linking users to various zombie related pages and the developers GitHub account. The icons appear in the centre of the footer.
+- **Youtube Embed** - Videos relating to the content on the Survival Tips Page and the Camp Setup Page have been embedded. These videos were embedded to emphasise the content and provide additional information relating to the content.
+- **Google Maps Embed** - iframe embedding of Google maps, showing the location of Northern Ireland's Secret Bunker was added to the Contact Page. The map is resized depending on the screen size to ensure the readability of the page on mobile devices.
+- **Contact Form** - A contact form is used in the Contact Page, to provide a point of contact for the user.
+- **404 page** - A 404 page providing a unique user experience in the form of a mini-game/story redirects the user to the home page or, if the user chooses, to additional story pages to continue the experience.
+- **500 page** - A 500 page providing a unique user experience in the form of a mini-game/story redirects the user to the home page or, if the user chooses, to additional story pages to continue the experience.
+- **[Survival Tips Page](survival-tips.html "Survival Guild - Survival Tips Page")** - Providing survival tips for the users to get an understanding of how to survive the apocalypse.
+- **[Camp Setup Page](camp-setup.html "Survival Guild - Camp Setup Page")** - Providing camp setup tips for the users to get an understanding of setting up a strong and safe camp during the apocalypse.
+- **[The Infected Page](infected.html "Survival Guild - The Infected Page")** - Providing information relating to the Infected and how to defend yourself against them.
+- **[Contact Page](contact.html "Survival Guild - Contact Page")** - Providing contact details for the Survival Guild, a map to Northern Ireland's Secret Bunker, and a form allowing the user to enter the Survival Guild.
+- **[Competition Page](competition.html "Survival Guild - Competition Page")** - Providing details for the Survival Guild's competition, a terms and conditions box, and a form allowing the user to enter the Survival Guild's competition.
+
+### Features to Implement in the future
+- **Helpful Links Page**
+     - **Feature** - create a page with links to external sites where users can purchase the items discussed on the various pages.
+     - **Reason for not featuring in this release** - Not enough time to create this page before the submission date.
+
+[Back to top](#Survival-Guild)
+
+## Issues and Bugs 
+The developer ran into several issues during the development of the website, with the noteworthy ones listed below, along with solutions or ideas to implement in the future.
+
+**Background Bug** - A bug was detected early in development in the background of the main pages. While entering content onto the home page, the background colours were not covering the entire page, cutting off short and leaving a white background behind some of the content. The developer put a query to the #css-essentials channel in Slack and was provided with a simple piece of code from another user of Slack (Anthony O'Brien) which resolved the issue. It was from here that the developer was able to copy the code given as a solution to the bug, with celebratory success. This same issue occurred later on other pages, which the same piece of code was able to rectify.
+
+<details>
+<summary>Background Bug</summary>
+    
+![Background Bug](assets/readme-files/background-bug.png)
+    
+</details>
+
+**Navigation Bar/Hamburger Menu Responsiveness Bug** - A bug was detected while introducing responsiveness to the navigation bar and hamburger menu. At 1200px exactly, both the navigation bar and hamburger menus vanished. It was found that this was caused by setting the hamburger menu to be hidden at 1200px and up, and the navigation bar to be hidden at 1200px and down. The issue was rectified simply by changing the hamburger menu to be hidden from 1201px and up instead.
+
+**Google Maps Embedding Bug** - A bug was detected when embedding the Google map to be used for the Contact Page. The developer was previously using the web address to embed the map into the contact page. This caused an error that prevented the map from loading. The developer found that the link was to be embedded using the pre-existing embedding code provided by Google Maps, which was previously unknown to the developer. Upon implementing the correct embedding code, the map worked perfectly.
+
+**Back-to-top Button Bug** - A bug was detected in the Back-to-top Button where the Awesome Fonts arrow up icon disappeared. It was found that the developer was using the wrong class to colour the icon, causing it to appear invisible. This was rectified by introducing a new class name of "top-home", to which the colouring was applied. In addition to this, during the validation of the code, an error appeared in the code for the button. It appears that the code borrowed from <a href="https://secluded.site/adding-a-better-scroll-to-top-button-without-javascript/">Secluded.Site</a> was causing the problem. While the code worked perfectly, the creator placed a <button> element as a descendant of the <a> element, causing the error.
+
+**Double-click Ads Link Bug** - A bug was detected in the developer tools console. On the survival-tips.html and camp-setup.html pages, a bug appeared saying "Loading failed for the <script> with source 'http://static.doubleclick.net/instream/as-status.js'". After careful testing, the source of the bug was found to be the YouTube videos embedded in the page, which the developer was unable to alter to remove the bug. 
+
+<details>
+<summary>Background Bug</summary>
+    
+![Ad double-click Bug](assets/readme-files/double-click-bug.PNG)
+    
+</details>
+    
+[Back to top](#Survival-Guild)
+    
+## Technologies Used
+### Main Languages Used
+- [HTML5](https://en.wikipedia.org/wiki/HTML5 "Link to HTML Wiki")
+- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets "Link to CSS Wiki")
+
+### Frameworks, Libraries & Programs Used
+- [Google Fonts](https://fonts.google.com/ "Link to Google Fonts")
+    - Google fonts was used to import the fonts "Special Elite", "Open Sans", "Oswald" and "Nosifer" into the style.css file. These fonts were used throughout the project.
+- [Font Awesome](https://fontawesome.com/ "Link to FontAwesome")
+     - Font Awesome was used on almost all pages throughout the website to import icons (e.g. social media icons) for UX purposes.
+- [GitPod](https://gitpod.io/ "Link to GitPod homepage")
+     - GitPod was used for writing code, commiting, and then pushing to GitHub.
+- [GitHub](https://github.com/ "Link to GitHub")
+     - GitHub was used to store the project after pushing
+- [Balsamiq](https://balsamiq.com/ "Link to Balsamiq homepage")
+     - Balsamiq was used to create the wireframes during the design phase of the project.
+- [Figma](https://www.figma.com/ "Link to Figma homepage")
+     - Figma was used to create the concept art during the design phase of the project.
+- [Am I Responsive?](http://ami.responsivedesign.is/# "Link to Am I Responsive Homepage")
+     - Am I Responsive was used in order to see responsive design throughout the process and to generate mockup imagery to be used.
+
+[Back to top](#Survival-Guild)
+    
+## Testing
+
+Testing information can be found in a separate testing [file](TESTING.md "Link to testing file")
+
+## Deployment
+
+This project was developed using [GitPod](https://www.gitpod.io/ "Link to GitPod site"), which was then committed and pushed to GitHub using the GitPod terminal.
+
+### Deploying on GitHub Pages
+To deploy this page to GitHub Pages from its GitHub repository, the following steps were taken:
+
+1. Log into [GitHub](https://github.com/login "Link to GitHub login page") or [create an account](https://github.com/join "Link to GitHub create account page").
+2. Locate the [GitHub Repository](https://github.com/Irishbecky91/survival-guild "Link to GitHub Repo").
+3. At the top of the repository, select Settings from the menu items.
+4. Scroll down the Settings page to the "Pages" section.
+5. Under "Source" click the drop-down menu labelled "None" and select "Main".
+6. Upon selection, the page will automatically refresh meaning that the website is now deployed.
+7. Scroll back down to the "Pages" section to retrieve the deployed link.
+    
+
+    
+## Credits 
+
+### Content
+- Some of the text used in the the various pages were borrowed and adapted from various sites, listed below.
+    - [Reserve America](https://www.reserveamerica.com/outdoors/how-to-start-a-campfire.html "Link to Reserve America - How to Start a Campfire")
+    - [Seeker](https://www.seeker.com/top-ways-to-purify-water-in-the-wilderness-1765491027.htmlhttps://www.seeker.com/top-ways-to-purify-water-in-the-wilderness-1765491027.html "Link to Seeker - Purifying Water")
+    - [Survival Freedom]( https://survivalfreedom.com/10-ways-to-build-a-shelter-out-of-natural-resources/ "Link to Survival Freedom - Building Shelter from Natural Resources")
+
+### Media
+- Almost all images were sourced from the various artists from [Unsplash](https://unsplash.com/ "Link to Unsplash") and [Pixabay](https://pixabay.com/ "Link to Pixabay").
+- The images of "The infected" were sourced from [Soufiane Idrassi](https://www.artstation.com/cgsoufiane "Link to Soufiane Idrassi's account on Art Station") through the website [Art Station](https://www.artstation.com/ "Link to Art Station Home Page").
+- All videos were sourced from various channels on [YouTube](https://youtube.com/ "Link to YouTube Home Page")
+
+### Code 
+The developer consulted multiple sites in order to better understand the code they were trying to implement. For code that was copied and edited, the developer made sure to reference this with the code. The following sites were used on a more regular basis:
+- [Stack Overflow](https://stackoverflow.com/ "Link to Stack Overflow page")
+- [W3Schools](https://www.w3schools.com/ "Link to W3Schools page")
+
+[Back to top](#Survival-Guild)
+
+## Acknowledgements
+
+- I would like to thank my family for their valued opinions and critic during the process of design and development.
+- I would like to thank my tutor, Kasia, and my mentor, Seun, for their invaluable help and guidance throughout the process.
+- Lastly, I would like to extend my deepest gratitude to the amazing people in Slack who helped me rigorously test every aspect of my site.
+
+[Back to top](#Survival-Guild)
+
+***
