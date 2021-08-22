@@ -11,36 +11,57 @@
   <!-- header section -->
   <header>
     <a href="index.html" aria-label="Click to return to the homepage"><i id="logo" class="far fa-edit"></i><h1> Do You Sudoku?</h1></a>
-    <div id="game-options">
-      <!-- Pick the appearance of the game page -->
-      <div id="theme">
-        <h2>Pick your theme: </h2>
-        <label>Default <input id="default-theme" type="radio" name="theme" value="default" aria-label="Click to show the default theme" checked></input></label>
-        <label>Dark <input id="dark-theme" type="radio" name="theme" value="dark" aria-label="Click to show the dark theme"></input></label>
-        <label>Seaside <input id="seaside-theme" type="radio" name="theme" value="seaside" aria-label="Click to show the seaside theme"></input></label>
-        <label>Coffee <input id="coffee-theme" type="radio" name="theme" value="coffee" aria-label="Click to show the coffee theme"></input></label>      
-      </div>
-    
-      <!-- Pick the game difficulty -->
-      <div id="difficulty">
-        <h2>Pick your difficulty: </h2>
-        <i id="easy-diff" class="far fa-laugh-beam"></i>
-        <i id="intermidiate-diff" class="far fa-smile-beam"></i>
-        <i id="hard-diff" class="fas fa-meh"></i>
-        <i id="hardcore-diff" class="fas fa-skull"></i>
-      </div>
-
-      <!-- Pick the time limit for your game -->
-      <div id="game-time">
-        <h2>Pick your time setting: </h2>
-        <label>3 minutes <input id="mins-3" type="radio" name="game-time" value="three-min" checked></input></label>
-        <label>5 minutes <input id="mins-5" type="radio" name="game-time" value="five-min"></input></label>
-        <label>10 minutes <input id="mins-10" type="radio" name="game-time" value="ten-min"></input></label>
-      </div>
-    </div>
-    <!-- Press this to start the game -->
-    <button id="start-game-btn">Start new game</button>
   </header>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li id="home">
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      </li>
+      <li id="rules">
+        <a href="instructions.html"><i class="fas fa-book-open"></i> Rules</a>
+      </li>
+      <li id="game">
+        <a href="game.html"><i class="fas fa-edit"></i> Game</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Customisable game settings -->
+  <div id="game-options">
+    <!-- Pick the appearance of the game page -->
+    <div id="theme">
+      <h2>Theme: </h2>
+      <select name="theme" id="theme">
+        <option id="default-theme" value="default">Default</label>
+        <option id="dark-theme" value="dark">Dark</label>
+        <option id="seaside-theme" value="seaside">Seaside</label>
+        <option id="coffee-theme" value="coffee">Coffee</label>
+      </select>
+    </div>
+  
+    <!-- Pick the game difficulty -->
+    <div id="difficulty">
+      <h2>Difficulty: </h2>
+      <i id="easy-diff" class="far fa-laugh-beam"></i>
+      <i id="intermidiate-diff" class="far fa-smile-beam"></i>
+      <i id="hard-diff" class="fas fa-meh"></i>
+      <i id="hardcore-diff" class="fas fa-skull"></i>
+    </div>
+
+    <!-- Pick the time limit for your game -->
+    <div id="game-time">
+      <h2>Time: </h2>
+      <select name="game-time" id="game-time">
+        <option id="mins-3" value="three-min">3 minutes</option>
+        <option id="mins-5" value="five-min">5 minutes</option>
+        <option id="mins-10" value="ten-min">10 minutes</option>
+      </select>
+    </div>
+  </div>
+  <!-- Press this to start the game -->
+  <button id="start-game-btn">Start new game</button>
 
   <!-- Main content section -->
   <!-- Shows the remaining l and timer for the game -->
