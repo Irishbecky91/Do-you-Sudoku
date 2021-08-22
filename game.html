@@ -5,12 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="https://kit.fontawesome.com/9d283dbd3f.js" crossorigin="anonymous"></script>
-  <title>Do You Sudoku?</title>
+  <title>Do You Sudoku? - Game</title>
 </head>
 <body>
+  <!-- header section -->
   <header>
     <a href="index.html" aria-label="Click to return to the homepage"><i id="logo" class="far fa-edit"></i><h1> Do You Sudoku?</h1></a>
     <div id="game-options">
+      <!-- Pick the appearance of the game page -->
       <div id="theme">
         <h2>Pick your theme: </h2>
         <label>Default <input id="default-theme" type="radio" name="theme" value="default" aria-label="Click to show the default theme" checked></input></label>
@@ -19,13 +21,16 @@
         <label>Coffee <input id="coffee-theme" type="radio" name="theme" value="coffee" aria-label="Click to show the coffee theme"></input></label>      
       </div>
     
+      <!-- Pick the game difficulty -->
       <div id="difficulty">
         <h2>Pick your difficulty: </h2>
-        <label>Beginner <input id="easy-diff" type="radio" name="difficulty" value="easy" checked></input></label>
-        <label>Intermediate <input id="inter-diff" type="radio" name="difficulty" value="inter"></input></label>
-        <label>Hard <input id="hard-diff" type="radio" name="difficulty" value="hard"></input></label>
-        <label>Hardcore <input id="hardcore-diff" type="radio" name="difficulty" value="hardcore"></input></label>
+        <i id="easy-diff" class="far fa-laugh-beam"></i>
+        <i id="intermidiate-diff" class="far fa-smile-beam"></i>
+        <i id="hard-diff" class="fas fa-meh"></i>
+        <i id="hardcore-diff" class="fas fa-skull"></i>
       </div>
+
+      <!-- Pick the time limit for your game -->
       <div id="game-time">
         <h2>Pick your time setting: </h2>
         <label>3 minutes <input id="mins-3" type="radio" name="game-time" value="three-min" checked></input></label>
@@ -33,16 +38,22 @@
         <label>10 minutes <input id="mins-10" type="radio" name="game-time" value="ten-min"></input></label>
       </div>
     </div>
+    <!-- Press this to start the game -->
     <button id="start-game-btn">Start new game</button>
   </header>
 
-  <div id="score">
+  <!-- Main content section -->
+  <!-- Shows the remaining l and timer for the game -->
+  <div id="stats">
     <p id="timer"></p>
     <p id="lives"></p>
   </div>
 
+  <!-- The game board -->
   <div id="game">
     <div id="grid"></div>
+
+    <!-- The number selector for the game -->
     <div id="number-selector" class="hidden">
       <p id="one">1</p>
       <p id="two">2</p>
@@ -56,10 +67,13 @@
     </div>
   </div>
 
+  <!-- Footer Section -->
   <footer>
     <div>
       <p id="footer-p">Created by Rebecca Rayner</p>
     </div>
+
+    <!-- Social Media icons -->
     <div id="icons">
       <a href="https://github.com/Irishbecky91" aria-label="Link to Rebecca Rayner's LinkedIn account"><i id="github" class="fab fa-github"></i></a>
       <a href="https://www.linkedin.com/in/rebecca-rayner-66044417b/" aria-label="Link to Rebecca Rayner's LinkedIn account"><i id="linkedin" class="fab fa-linkedin-in"></i></a>
