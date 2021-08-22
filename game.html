@@ -10,23 +10,15 @@
 <body>
   <!-- header section -->
   <header>
-    <a href="index.html" aria-label="Click to return to the homepage"><i id="logo" class="far fa-edit"></i><h1> Do You Sudoku?</h1></a>
+    <h1><i id="logo" class="far fa-edit"></i> Do You Sudoku?</h1>
   </header>
 
   <!-- Navigation Bar -->
-  <nav>
-    <ul>
-      <li id="home">
-        <a href="index.html"><i class="fas fa-home"></i> Home</a>
-      </li>
-      <li id="rules">
-        <a href="instructions.html"><i class="fas fa-book-open"></i> Rules</a>
-      </li>
-      <li id="game">
-        <a href="game.html"><i class="fas fa-edit"></i> Game</a>
-      </li>
-    </ul>
-  </nav>
+  <div class="navbar">
+    <a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+    <a href="instructions.html"><i class="fas fa-book-open"></i> Rules</a>
+    <a class="active" href="game.html"><i class="fas fa-edit"></i> Game</a>
+  </div>
 
   <!-- Customisable game settings -->
   <div id="game-options">
@@ -90,13 +82,18 @@
 
   <!-- Footer Section -->
   <footer>
-    <div>
-      <p id="footer-p">Created by Rebecca Rayner</p>
+    <!-- Github Icon -->
+    <div id="github-icon">
+      <a href="https://github.com/Irishbecky91" aria-label="Link to Rebecca Rayner's LinkedIn account"><i id="github" class="fab fa-github"></i></a>
     </div>
 
-    <!-- Social Media icons -->
-    <div id="icons">
-      <a href="https://github.com/Irishbecky91" aria-label="Link to Rebecca Rayner's LinkedIn account"><i id="github" class="fab fa-github"></i></a>
+    <!-- Footer Text -->
+    <div id="footer-text">
+      <p>Created by Rebecca Rayner</p>
+    </div>
+
+    <!-- LinkedIn icon -->
+    <div id="linkedin-icon">
       <a href="https://www.linkedin.com/in/rebecca-rayner-66044417b/" aria-label="Link to Rebecca Rayner's LinkedIn account"><i id="linkedin" class="fab fa-linkedin-in"></i></a>
     </div>
   </footer>

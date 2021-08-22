@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&family=Roboto&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Number selector hidden until game starts */
+div.hidden {
+ display: none; 
+}
+
+/* Header styling - Default theme */
+header {
+  text-align: center;
+  padding-bottom: 10px;
+  font-family: "Rampart One", sans-serif;
+  font-size: 25px;
+  z-index: 999;
+  width: 100vw;
+  height: 100px;
+  background-color: #333;
+  color: bisque;
+}
+
+i#logo {
+  text-align: center;
+  padding-bottom: 10px;
+  font-size: 50px;
+  z-index: 999;
+}
+
+header > h1 {
+  text-align: center;
+  font-size: 50px;
+  padding: 10px 0;
+  z-index: 999;
+}
+
+
+/* Body styling - Default theme */
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 0px;
+  left: 0px;
+}
+
+
+/* Navigation Bar Styling */
+div.navbar {  
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  overflow: auto;
+  background-color: burlywood;
+}
+
+div.navbar a {
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: "Roboto", sans-serif;
+  color: #333;
+}
+
+div.navbar a:hover {
+  background-color: #000;
+  color: bisque;
+}
+
+/* Current/active navbar link */
+div.navbar a.active {
+  background-color: #333;
+  color: bisque;
+}
+
+
+/* Game Settings Styling */
+div#game-options {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(211, 173, 128);
+  color: #333;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  padding-top: 10px;
+}
+
+div#game-options > * {
+  margin-bottom: 10px;
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+}
+
+button#start-game-btn {
+  justify-self: center;
+  margin-top: 50px;
+  font-size: 40px;
+  background-color: #333;
+  color: bisque;
+  border: 2px solid #000;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+
+/* Stats section */
+p#timer, p#lives {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+div#game{
+  display: flex;
+  justify-content: center;
+}
+
+
+/* Difficulty Settings Styling */
+div#difficulty > i {
+  margin: 0 10px;
+  font-size: 25px;
+}
+
+
+/* Footer Styling */
+footer {
+  background-color: #333;
+  color: bisque;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 30px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+}
+
+div#footer-text {
+  left: 0;
+  bottom: 5px;
+  display: flex;
+  justify-self: left;
+}
+
+div#github-icon a {
+  color: bisque;
+  font-size: 20px;
+  bottom: 5px;
+  margin: 0 20px;
+}
+
+div#linkedin-icon a {
+  color: bisque;
+  font-size: 20px;
+  bottom: 5px;
+  margin: 0 40px;
+}
+
+
+/* Dark Theme */
+header.dark {
+  background-color: #333;
+  color: #FFF;
+}
+
+body.dark {
+  background-color: #333;
+  color: #FFF; 
+}
+
+
+/* Add responsiveness - screens less than 500 pixels */
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
