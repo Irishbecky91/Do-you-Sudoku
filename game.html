@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://kit.fontawesome.com/9d283dbd3f.js" crossorigin="anonymous"></script>
+  <title>Do You Sudoku?</title>
+</head>
+<body>
+  <header>
+    <a href="index.html" aria-label="Click to return to the homepage"><i id="logo" class="far fa-edit"></i><h1> Do You Sudoku?</h1></a>
+    <div id="game-options">
+      <div id="theme">
+        <h2>Pick your theme: </h2>
+        <label>Default <input id="default-theme" type="radio" name="theme" value="default" aria-label="Click to show the default theme" checked></input></label>
+        <label>Dark <input id="dark-theme" type="radio" name="theme" value="dark" aria-label="Click to show the dark theme"></input></label>
+        <label>Seaside <input id="seaside-theme" type="radio" name="theme" value="seaside" aria-label="Click to show the seaside theme"></input></label>
+        <label>Coffee <input id="coffee-theme" type="radio" name="theme" value="coffee" aria-label="Click to show the coffee theme"></input></label>      
+      </div>
+    
+      <div id="difficulty">
+        <h2>Pick your difficulty: </h2>
+        <label>Beginner <input id="easy-diff" type="radio" name="difficulty" value="easy" checked></input></label>
+        <label>Intermediate <input id="inter-diff" type="radio" name="difficulty" value="inter"></input></label>
+        <label>Hard <input id="hard-diff" type="radio" name="difficulty" value="hard"></input></label>
+        <label>Hardcore <input id="hardcore-diff" type="radio" name="difficulty" value="hardcore"></input></label>
+      </div>
+      <div id="game-time">
+        <h2>Pick your time setting: </h2>
+        <label>3 minutes <input id="mins-3" type="radio" name="game-time" value="three-min" checked></input></label>
+        <label>5 minutes <input id="mins-5" type="radio" name="game-time" value="five-min"></input></label>
+        <label>10 minutes <input id="mins-10" type="radio" name="game-time" value="ten-min"></input></label>
+      </div>
+    </div>
+    <button id="start-game-btn">Start new game</button>
+  </header>
+
+  <div id="score">
+    <p id="timer"></p>
+    <p id="lives"></p>
+  </div>
+
+  <div id="game">
+    <div id="grid"></div>
+    <div id="number-selector" class="hidden">
+      <p id="one">1</p>
+      <p id="two">2</p>
+      <p id="three">3</p>
+      <p id="four">4</p>
+      <p id="five">5</p>
+      <p id="six">6</p>
+      <p id="seven">7</p>
+      <p id="eight">8</p>
+      <p id="nine">9</p>
+    </div>
+  </div>
+
+  <footer>
+    <div>
+      <p id="footer-p">Created by Rebecca Rayner</p>
+    </div>
+    <div id="icons">
+      <a href="https://github.com/Irishbecky91" aria-label="Link to Rebecca Rayner's LinkedIn account"><i id="github" class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/rebecca-rayner-66044417b/" aria-label="Link to Rebecca Rayner's LinkedIn account"><i id="linkedin" class="fab fa-linkedin-in"></i></a>
+    </div>
+  </footer>
+
+  <script src="assets/javascript/script.js"></script>
+</body>
+</html>
