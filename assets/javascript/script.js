@@ -35,8 +35,6 @@ window.onload = function (){
   id("start-game-btn").addEventListener("click", startNewGame);
 }
 
-// 
-
 // This function starts a new game with the users chosen settings
 function startNewGame() {
   // Select game board difficulty
@@ -54,11 +52,47 @@ function startNewGame() {
   lives = 5;
   deselect = false;
   id("lives").textContent = "Remaining Lives: 5";
+  // Create game board based on difficulty
+  createGrid(grid);
+};
+
+// This function creates the board
+function createGrid(grid) {
+  clearPrevGrid();
+}
+
+// This function clears the previously played game board
+function clearPrevGrid(){
+  // Select all the squares
+  let squares = qsa(".square");
+  // Remove the contents of all squares
+  for (let i = 0; i < squares.length; i++) {
+    squares[i].remove();
+  }
+  // Clear any remaining time on timer
+  if (timer) clearTimer(timer);
+  // Deselect any numbers still selected
+  for (let i = 0; i < id("number-selector").children.length; i++) {
+    id("number-selector").children[i].classList.remove("selected");
+  }
+  // Clear all selected variables
+  selectedNumber = null;
+  selectedSquare = null;
 };
 
 
 // Helper functions
-// This function removes the need to type document.getElementById(); each time an id is being called.
+// This function removes the need to type document.getElementById(); each time an id is called.
 function id(id) {
   return document.getElementById(id);
+}
+
+// This function removes the need to type document.querySelector(); each time an id is called.
+function qs(selector) {
+  return document.querySelector(selector);
+}
+
+// This function removes the need to type document.querySelectorAll(); each time an id is called.
+function qsa(selector) {
+  return document.querySelectorAll(selector);
 }
