@@ -19,7 +19,7 @@ header {
   font-family: "Rampart One", sans-serif;
   font-size: 25px;
   z-index: 999;
-  width: 100vw;
+  width: 100%;
   height: 100px;
   background-color: #333;
   color: bisque;
@@ -37,6 +37,7 @@ header > h1 {
   font-size: 50px;
   padding: 10px 0;
   z-index: 999;
+  width: 100%;
 }
 
 
@@ -49,6 +50,16 @@ body {
   align-items: center;
   top: 0px;
   left: 0px;
+  background-color: antiquewhite;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+ font-family: "Rampart One", sans-serif;
+ font-size: 40px;
+ margin-top: 25px;
+ margin-bottom: 30px;
 }
 
 
@@ -82,27 +93,79 @@ div.navbar a.active {
 }
 
 
+/* Home Page Styling */
+div.intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: "Roboto", sans-serif;
+}
+
+div.img-div {
+  margin: 10px 50px 80px 50px;
+  text-align: center;
+}
+
+div.img-div img {
+  width: 30rem;
+  border: 10px solid #FFF;
+}
+
+div.intro-text {
+  width: 350px;
+  padding-top: 50px;
+}
+
+div.img-div figcaption {
+  font-size: 12px;
+}
+
+div.intro-text p{
+  padding-bottom: 30px;
+}
+
+
+/* Instructions Page Styling */
+div#instructions {
+  margin-bottom: 80px;
+}
+
+ul {
+  margin: 20px 0;
+}
+
+li {
+  padding: 10px 0;
+  margin-left: 50px;
+}
+
+
+/* Game Page Styling */
 /* Game Settings Styling */
 div#game-options {
   display: flex;
   justify-content: center;
-  background-color: rgb(211, 173, 128);
+  background-color: rgb(214, 163, 100);
   color: #333;
   width: 100%;
   font-family: "Roboto", sans-serif;
-  padding-top: 10px;
+  max-height: 40px;
 }
 
 div#game-options > * {
-  margin-bottom: 10px;
   padding: 0 50px;
   display: flex;
   align-items: center;
 }
 
+div#game-options h2 {
+  font-size: 20px;
+  padding: 10px;
+}
+
 button#start-game-btn {
   justify-self: center;
-  margin-top: 50px;
+  margin-top: 20vh;
   font-size: 40px;
   background-color: #333;
   color: bisque;
@@ -118,6 +181,7 @@ p#timer, p#lives {
   text-align: center;
 }
 
+/* Game Board */
 div#game{
   display: flex;
   justify-content: center;
@@ -135,15 +199,16 @@ div#difficulty > i {
 footer {
   background-color: #333;
   color: bisque;
-  position: absolute;
   left: 0;
   bottom: 0;
-  height: 30px;
+  height: 40px;
+  width: 100vw;
   font-size: 20px;
   display: flex;
   justify-content: center;
   flex-direction: row;
-  width: 100%;
+  padding-top: 10px;
+  position: fixed;
 }
 
 div#footer-text {
@@ -157,7 +222,7 @@ div#github-icon a {
   color: bisque;
   font-size: 20px;
   bottom: 5px;
-  margin: 0 20px;
+  margin: 0 40px;
 }
 
 div#linkedin-icon a {
