@@ -33,7 +33,7 @@ let deselect;
 window.onload = function (){
   // Run the startgame function when the Start New Game button is clicked
   id("start-game-btn").addEventListener("click", startNewGame);
-}
+};
 
 
 // This function starts a new game with the users chosen settings
@@ -55,7 +55,53 @@ function startNewGame() {
   id("lives").textContent = "Remaining Lives: 5";
   // Create game board based on difficulty
   createGrid(grid);
+  // Start the timer
+  startTimer();
+  // Assigns theme based on select
+  if (id("theme-1").checked){
+    qs("body", "header", "footer").classList.remove("dark");
+    qs("body", "header", "footer").classList.remove("tech");
+    qs("body", "header", "footer").classList.remove("unicorn");
+    qs("body", "header", "footer").classList.add("light");
+  } else if (id("theme-2").checked) {
+    qs("body", "header", "footer").classList.remove("light");
+    qs("body", "header", "footer").classList.remove("tech");
+    qs("body", "header", "footer").classList.remove("unicorn");
+    qs("body", "header", "footer").classList.add("dark");
+  } else if (id("theme-3").checked) {
+    qs("body", "header", "footer").classList.remove("light");
+    qs("body", "header", "footer").classList.remove("dark");
+    qs("body", "header", "footer").classList.remove("unicorn");
+    qs("body", "header", "footer").classList.add("tech");
+  } else if (id("theme-4").checked) {
+    qs("body", "header", "footer").classList.remove("light");
+    qs("body", "header", "footer").classList.remove("dark");
+    qs("body", "header", "footer").classList.remove("tech");
+    qs("body", "header", "footer").classList.add("unicorn");
+  }
 };
+
+function startTimer() {
+  // Set time remaining based on selection
+  if (id("time-3").checked) {
+    timeLeft = 180;
+  } else if (id("time-5").checked) {
+    timeLeft = 300;
+  } else {
+    timeLeft = 600;
+  }
+  // Set the timer for first second
+  id("timer").textContent = timeConvert(timeLeft);
+  // Timer to update every second
+  timer = setInterval(function() {
+    timeLeft --;
+    // If time runs out, end the game
+    if (timeLeft === 0) {
+      gameOver();
+    }
+    id("timer").textContent = timeConvert(timeLeft);
+  }, 1000)
+}
 
 
 // This function creates the board
@@ -82,7 +128,7 @@ function createGrid(grid) {
     // // Add "square" class to each square created
     square.classList.add("square");
     // Adding in a thicker bottom border on these lines to define the game board sections
-    if ((square.id > 17 && square.id < 27) || (square.id > 44 & square.id < 54)) {
+    if ((square.id > 17 && square.id < 27) || (square.id > 44 && square.id < 54)) {
       square.classList.add("bottomBorder");
     }
     // Adding in a thicker border on these right of these lines to define the game board sections (Selects the 3rd and 6th square in each row)
@@ -112,7 +158,7 @@ function clearPrevGrid(){
   // Clear all selected variables
   selectedNumber = null;
   selectedSquare = null;
-};
+}
 
 
 // Helper functions

@@ -25,35 +25,39 @@
     <!-- Pick the appearance of the game page -->
     <div id="theme">
       <h2>Theme: </h2>
-      <select name="theme" id="theme">
-        <option id="default-theme" value="default">Default</label>
-        <option id="dark-theme" value="dark">Dark</label>
-        <option id="seaside-theme" value="seaside">Seaside</label>
-        <option id="coffee-theme" value="coffee">Coffee</label>
-      </select>
+      <label>Light</label>
+      <input id="theme-1" type="radio" value="light" name="theme" checked>
+      <label>Dark</label>
+      <input id="theme-2" type="radio" value="dark" name="theme">
+      <label>Tech</i></label>
+      <input id="theme-3" type="radio" value="tech" name="theme">
+      <label>Unicorn</i></label>
+      <input id="theme-4" type="radio" value="unicorn" name="theme">
+      
     </div>
   
     <!-- Pick the game difficulty -->
     <div id="difficulty">
       <h2>Difficulty: </h2>
       <label>Easy</label>
-      <input id="easy-diff" type="radio" name="difficulty" checked>
-      <label>Intermediate</label>
-      <input id="intermidiate-diff" type="radio" name="difficulty">
+      <input id="easy-diff" type="radio" value="easy" name="difficulty" checked>
+      <label>Medium</label>
+      <input id="medium-diff" type="radio" value="medium" name="difficulty">
       <label>Hard</i></label>
-      <input id="hard-diff" type="radio" name="difficulty">
+      <input id="hard-diff" type="radio" value="hard" name="difficulty">
       <label>Hardcore</i></label>
-      <input id="hardcore-diff" type="radio" name="difficulty">
+      <input id="hardcore-diff" type="radio" value="hardcore" name="difficulty">
     </div>
 
     <!-- Pick the time limit for your game -->
     <div id="game-time">
       <h2>Time: </h2>
-      <select name="game-time" id="game-time">
-        <option id="mins-3" value="three-min">3 minutes</option>
-        <option id="mins-5" value="five-min">5 minutes</option>
-        <option id="mins-10" value="ten-min">10 minutes</option>
-      </select>
+      <label>3mins</label>
+      <input id="time-3" type="radio" value="three" name="difficulty" checked>
+      <label>5mins</label>
+      <input id="time-5" type="radio" value="five" name="difficulty">
+      <label>10mins</i></label>
+      <input id="time-10" type="radio" value="ten" name="difficulty">
     </div>
   </div>
   <!-- Press this to start the game -->

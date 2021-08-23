@@ -163,6 +163,20 @@ div#game-options h2 {
   padding: 10px;
 }
 
+/* Difficulty Settings Styling */
+div#difficulty > label {
+  padding-right: 5px;
+}
+div#difficulty > input {
+  font-size: 20px;
+  margin: 0 15px 0 0;
+}
+
+div#difficulty {
+  margin: 0 10px 0 30px;
+}
+
+/* Start New Game Button */
 button#start-game-btn {
   justify-self: center;
   margin-top: 5vh;
@@ -178,7 +192,7 @@ button#start-game-btn {
 
 /* Stats section */
 p#timer, p#lives {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
   text-align: center;
 }
@@ -240,16 +254,6 @@ div.bottomBorder {
 }
 
 
-/* Difficulty Settings Styling */
-div.difficulty > label {
-  font-size: 25px;
-}
-
-div.difficulty > input{
-  margin: 0 10px 0 30px;
-}
-
-
 /* Footer Styling */
 footer {
   background-color: #333;
@@ -291,12 +295,81 @@ div#linkedin-icon a {
 /* Dark Theme */
 header.dark {
   background-color: #333;
-  color: #FFF;
+  color: bisque;
+}
+
+div.dark {
+  background-color: #444;
+  color: bisque;
 }
 
 body.dark {
+  background-color: #555;
+  color: bisque;
+  border: bisque;
+}
+
+footer.dark {
   background-color: #333;
-  color: #FFF; 
+  color: bisque;
+}
+
+
+/* Coffee Theme */
+header.tech {
+  background-color: greenyellow;
+  color: #333;
+}
+
+div.tech {
+  background-color: #444;
+  color: greenyellow;
+}
+
+body.tech {
+  background-color: rgb(4, 61, 4);
+  color: bisque;
+}
+
+footer.tech {
+  background-color: greenyellow;
+  color: #333;
+}
+
+
+/* Seaside Theme */
+header.unicorn {
+  background: linear-gradient(
+    75deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(255, 154, 0, 1) 10%,
+    rgba(208, 222, 33, 1) 20%,
+    rgba(79, 220, 74, 1) 30%,
+    rgba(63, 218, 216, 1) 40%,
+    rgba(47, 201, 226, 1) 50%,
+    rgba(28, 127, 238, 1) 60%,
+    rgba(95, 21, 242, 1) 70%,
+    rgba(186, 12, 248, 1) 80%,
+    rgba(251, 7, 217, 1) 90%,
+    rgba(255, 0, 0, 1) 100%
+);
+  color: #333;
+}
+
+div.unicorn {
+  background-color: antiquewhite;
+  color: #333;
+}
+
+body.unicorn {
+  background-color: #555;
+  color: bique;
+  border: bisque;
+}
+
+footer.unicorn {
+  background-color: #333;
+  color: bisque;
 }
 
 
