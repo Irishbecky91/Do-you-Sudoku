@@ -229,19 +229,22 @@ p.incorrect {
   color: red;
 }
 
-.rightBorder {
+.right-border {
   border-right: 4px solid black;
 }
 
-.bottomBorder {
+.bottom-border {
   border-bottom: 4px solid black;
 }
 
 
 /* Difficulty Settings Styling */
-div#difficulty > i {
-  margin: 0 10px;
+div.difficulty > label {
   font-size: 25px;
+}
+
+div.difficulty > input{
+  margin: 0 10px 0 30px;
 }
 
 

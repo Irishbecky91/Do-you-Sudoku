@@ -58,7 +58,38 @@ function startNewGame() {
 
 // This function creates the board
 function createGrid(grid) {
+  // The game board and all variables are cleared
   clearPrevGrid();
+  // Increment the ids of the squares as they are created
+  let idNum = 0;
+  // This creates 81 squares to fill the 9x9 grid of the game board
+  for (let i = 0; i < 81; i++) {
+    // This creates a new paragraph element
+    let square = document.createElement("p");
+    // Checks the pre-defined game boards based on difficulty, to see if the squares should have numbers or be empty
+    if (grid.charAt(i) != "-") {
+      // Assign the correct number to the squares
+      square.textContent = grid.charAt(i);
+    } else {
+      // Add event listener to each blank square
+      square.id = idNum;
+      // Increment the id for each square made
+      idNum++;
+      // Add "square" class to each square created
+      square.classList.add("square");
+
+      // Adding in a thicker bottom border on these lines to define the game board sections
+      if ((square.id > 17 && square.id < 27) || (square.id > 44 && square.id < 54)) {
+        square.classList.add("bottom-border");
+      }
+      // Adding in a thicker border on these right of these lines to define the game board sections (Selects the 3rd and 6th square in each row)
+      if ((square.id + 1) % 9 == 3 || (square.id + 1) % 9 == 6) {
+        square.classList.add("right-border");
+      }
+      // Add square to the game board
+      id("grid").appendChild(square);
+    }
+  }
 }
 
 // This function clears the previously played game board
