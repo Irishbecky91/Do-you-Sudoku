@@ -212,7 +212,11 @@ div#number-selector > p {
   margin-left: 50px;
   margin-top: 5px;
   margin-bottom: 5px;
+  padding-top: 5px;
   text-align: center;
+  background-color: #333;
+  color: bisque;
+  cursor: pointer;
 }
 
 div#grid {
@@ -224,6 +228,7 @@ div#grid {
   align-content: flex-start;
   width: 540px;
   height: 540px;
+  cursor: pointer;
 }
 
 div.square {
@@ -232,13 +237,19 @@ div.square {
   height: 60px;
   text-align: center;
   margin: 0;
-  vertical-align: middle;
+  padding-top: 5px;
   font-size: 40px;
   background-color: beige;
 }
 
-p.selected {
-  background-color: lightblue;
+div#number-selector > p.selected {
+  background-color: bisque;
+  color: #333;
+}
+
+div#grid > div.selected {
+  background-color: bisque;
+  color: #333;
 }
 
 p.incorrect {
@@ -298,11 +309,6 @@ header.dark {
   color: bisque;
 }
 
-div.dark {
-  background-color: #444;
-  color: bisque;
-}
-
 body.dark {
   background-color: #555;
   color: bisque;
@@ -319,11 +325,6 @@ footer.dark {
 header.tech {
   background-color: greenyellow;
   color: #333;
-}
-
-div.tech {
-  background-color: #444;
-  color: greenyellow;
 }
 
 body.tech {
@@ -353,11 +354,6 @@ header.unicorn {
     rgba(251, 7, 217, 1) 90%,
     rgba(255, 0, 0, 1) 100%
 );
-  color: #333;
-}
-
-div.unicorn {
-  background-color: antiquewhite;
   color: #333;
 }
 

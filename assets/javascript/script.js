@@ -4,7 +4,7 @@ const easy = [
   "435269781682571493197834562826195347374682915951743628519326874248957136763418259"
 ];
 
-const intermediate = [
+const medium = [
   "-2-6-8---58---97------4----37----5--6-------4--8----13----2------98---36---3-6-9-",
   "123678945584239761967145328372461589691583274458792613836924157219857436745316892"
 ];
@@ -26,24 +26,47 @@ let timeLeft;
 let lives;
 let selectedNumber;
 let selectedSquare;
-let deselect;
+let noSelect;
 
 
-// Only runs code when window is fully loaded
+// This only allows the code to run when window is fully loaded
 window.onload = function (){
   // Run the startgame function when the Start New Game button is clicked
   id("start-game-btn").addEventListener("click", startNewGame);
+  // Add event Listener to each number and number selector
+  for (let i = 0; i < id("number-selector").children.length; i++) {
+    id("number-selector").children[i].addEventListener("click", function(){
+      // If number selection is not disabled
+      if (!noSelect) {
+        // If the number is already selected
+        if (this.classList.contains("selected")) {
+          // Deselect the selected number 
+          this.classList.remove("selected");
+          selectedNumber = null;
+        } else {
+          // Deselect all other selected numbers 
+          for (let i = 0; i < 9; i++) {
+            id("number-selector").children[i].classList.remove("selected");
+          }
+          // Select number and update selectedNumber variable
+          this.classList.add("selected");
+          selectedNumber = this;
+          updateMoveNum();
+        }
+      }
+    });
+  }
 };
 
 
-// This function starts a new game with the users chosen settings
+// This function starts a new game with the users chosen settings (Timer, Difficulty and Theme)
 function startNewGame() {
   // Select game board difficulty
   let grid;
   if (id("easy-diff").click) {
     grid = easy[0];
-  } else if (id("intermediate-diff").click) {
-    grid = intermediate[0];
+  } else if (id("medium-diff").click) {
+    grid = medium[0];
   } else if (id("hard-diff").click) {
     grid = hard[0];
   } else if (id("hardcore-diff").click) {
@@ -51,7 +74,7 @@ function startNewGame() {
   }
   // Set number of lives to five and enable selection of squares and numbers
   lives = 5;
-  deselect = false;
+  noSelect = false;
   id("lives").textContent = "Remaining Lives: 5";
   // Create game board based on difficulty
   createGrid(grid);
@@ -59,28 +82,80 @@ function startNewGame() {
   startTimer();
   // Assigns theme based on select
   if (id("theme-1").checked){
-    qs("body", "header", "footer").classList.remove("dark");
-    qs("body", "header", "footer").classList.remove("tech");
-    qs("body", "header", "footer").classList.remove("unicorn");
-    qs("body", "header", "footer").classList.add("light");
+    // Remove unwanted themes from list and adds light theme
+    // Body
+    qs("body").classList.remove("dark");
+    qs("body").classList.remove("tech");
+    qs("body").classList.remove("unicorn");
+    qs("body").classList.add("light");
+    // Header
+    qs("header").classList.remove("dark");
+    qs("header").classList.remove("tech");
+    qs("header").classList.remove("unicorn");
+    qs("header").classList.add("light");
+    // Footer
+    qs("footer").classList.remove("dark");
+    qs("footer").classList.remove("tech");
+    qs("footer").classList.remove("unicorn");
+    qs("footer").classList.add("light");
   } else if (id("theme-2").checked) {
-    qs("body", "header", "footer").classList.remove("light");
-    qs("body", "header", "footer").classList.remove("tech");
-    qs("body", "header", "footer").classList.remove("unicorn");
-    qs("body", "header", "footer").classList.add("dark");
+    // Remove unwanted themes from list and adds dark theme
+    // Body
+    qs("body").classList.remove("light");
+    qs("body").classList.remove("tech");
+    qs("body").classList.remove("unicorn");
+    qs("body").classList.add("dark");
+    // Header
+    qs("header").classList.remove("light");
+    qs("header").classList.remove("tech");
+    qs("header").classList.remove("unicorn");
+    qs("header").classList.add("dark");
+    // Footer
+    qs("footer").classList.remove("light");
+    qs("footer").classList.remove("tech");
+    qs("footer").classList.remove("unicorn");
+    qs("footer").classList.add("dark");
   } else if (id("theme-3").checked) {
-    qs("body", "header", "footer").classList.remove("light");
-    qs("body", "header", "footer").classList.remove("dark");
-    qs("body", "header", "footer").classList.remove("unicorn");
-    qs("body", "header", "footer").classList.add("tech");
+    // Remove unwanted themes from list and adds tech theme
+    // Body
+    qs("body").classList.remove("light");
+    qs("body").classList.remove("dark");
+    qs("body").classList.remove("unicorn");
+    qs("body").classList.add("tech");
+    // Header
+    qs("header").classList.remove("light");
+    qs("header").classList.remove("dark");
+    qs("header").classList.remove("unicorn");
+    qs("header").classList.add("tech");
+    // Footer
+    qs("footer").classList.remove("light");
+    qs("footer").classList.remove("dark");
+    qs("footer").classList.remove("unicorn");
+    qs("footer").classList.add("tech");
   } else if (id("theme-4").checked) {
-    qs("body", "header", "footer").classList.remove("light");
-    qs("body", "header", "footer").classList.remove("dark");
-    qs("body", "header", "footer").classList.remove("tech");
-    qs("body", "header", "footer").classList.add("unicorn");
+// Remove unwanted themes from list and adds unicorn theme
+    // Body
+    qs("body").classList.remove("light");
+    qs("body").classList.remove("dark");
+    qs("body").classList.remove("tech");
+    qs("body").classList.add("unicorn");
+    // Header
+    qs("header").classList.remove("light");
+    qs("header").classList.remove("dark");
+    qs("header").classList.remove("tech");
+    qs("header").classList.add("unicorn");
+    // Footer
+    qs("footer").classList.remove("light");
+    qs("footer").classList.remove("dark");
+    qs("footer").classList.remove("tech");
+    qs("footer").classList.add("unicorn");
   }
-};
+  // Show the number selector
+  id("number-selector").classList.remove("hidden");
+}
 
+
+// This function starts the game timer with the selected time duration
 function startTimer() {
   // Set time remaining based on selection
   if (id("time-3").checked) {
@@ -100,11 +175,29 @@ function startTimer() {
       gameOver();
     }
     id("timer").textContent = timeConvert(timeLeft);
-  }, 1000)
+  }, 1000); // function runs every 1000 ms
 }
 
 
-// This function creates the board
+// This function converts the time to a format of mm:ss as a string
+function timeConvert(time) {
+  // Define minutes as 60 seconds or less
+  let minutes = Math.floor(time / 60);
+  // Display "0" infront of number of minutes if minutes is less than 10
+  if (minutes < 10) {
+    minutes = "0" + minutes;
+  }
+  // Define seconds as remainder of 60 seconds
+  let seconds = time % 60;
+  // Display "0" infront of number of seconds if seconds is less than 10
+  if (seconds < 10) {
+    seconds = "0" + seconds;
+  }
+  return minutes + ":" + seconds;
+}
+
+
+// This function creates the game board for the game
 function createGrid(grid) {
   // The game board and all variables are cleared
   clearPrevGrid();
@@ -120,6 +213,26 @@ function createGrid(grid) {
       square.textContent = grid.charAt(i);
     } else {
       // Add event listener to each blank square
+      square.addEventListener("click", function() {
+        // If noSelect is not disabled
+        if (!noSelect) {
+          // If the square is already selected
+          if (square.classList.contains("selected")) {
+            // Deselect the square selected
+            square.classList.remove("selected");
+            selectedSquare = null;
+          } else {
+            // Deselect all other squares selected
+            for (let i = 0; i < 81; i++) {
+              qsa(".square")[i].classList.remove("selected");
+            }
+            // Select square and update selectedSquare variable
+            square.classList.add("selected");
+            selectedNumber = square;
+            updateMoveNum();
+          }
+        }
+      });
     }
     // Assign an id to each square
     square.id = idNumber;
@@ -141,6 +254,105 @@ function createGrid(grid) {
 }
 
 
+// This function assigns the chosen number to a square if correct, or removes a life if incorrect
+function updateMoveNum() {
+  // If a square and a number are both selected
+  if (selectedSquare && selectedNumber) {
+    // Assign the chosen number to the chosen square
+    selectedSquare.textContent = selectedNumber.textContent;
+    // If the number matches the number in the solution key
+    if (checkIfCorrect(selectedSquare)){
+      // Deselect the selected square and number selector
+      selectedSquare.classList.remove("selected");
+      selectedNumber.classList.remove("selected");
+      // Clear any selected variables
+      selectedNumber = null;
+      selectedSquare = null;
+      // Check if the game board is completed
+      if (checkBoardComplete()) {
+        gameOver();
+      }
+    } else { // Check if the number does not match the solution key
+      // Disallow selecting new numbers for one full second
+      noSelect = true;
+      // Turn the selected square red
+      selectedSquare.classList.add("incorrect");
+      // Run for one second
+      setTimeout(function() {
+        // Take 1 from lives
+        lives --;
+        // If user runs out of lives
+        if (lives === 0) {
+          gameOver();
+        } else {
+          // If there are lives remaining
+          // Update the remaining lives section with current lives
+          id("lives").textContent = "Remaining Lives: " + lives;
+          // Allow number and square selection
+          noSelect = false;
+        }
+        // Restore square and number color and remove selected from both
+        selectedSquare.classList.remove("incorrect");
+        selectedSquare.classList.remove("selected");
+        selectedNumber.classList.remove("selected");
+        // Clear the text in tiles and selected variables
+        selectedSquare.textContent = "";
+        selectedSquare = null;
+        selectedNumber = null;
+      }, 500);
+    }
+  }
+}
+
+
+// This function checks if every square of the game board is filled, meaning the user has won
+function checkBoardComplete() {
+  let squares = qsa(".square");
+  for (let i = 0; i < squares.length; i++) {
+    if (squares[i].textContent === "") {
+      return false;
+    }
+    return true;
+  }
+}
+
+
+// This function ends the game
+function gameOver() {
+  // Disables any further moves and stops the timer
+  noSelect = true;
+  clearTimeout(timer);
+  // Display a win or loss mesasge
+  if (lives === 0 || timeLeft === 0) {
+    id("lives").textContent = "Uh oh! You lost! Want to try again?"
+  } else {
+    id("lives").textContent = "Woohoo! You won! Want to try again?"
+  }
+}
+
+
+// Check if a number/square pair is correct when compared to the solution
+function checkIfCorrect(square) {
+  // Assign the solution based on the difficulty setting chosen
+  let solution;
+  if (id("easy-diff").checked) {
+    solution = easy[1];
+  } else if (id("medium-diff").checked) {
+    solution = medium[1];
+  } else if (id("hard-diff").checked) {
+    solution = hard[1];
+  } else {
+    solution = hardcore[1];
+  }
+  // If square's number matches the solution number
+  if (solution.charAt(square.id) === square.textContent) {
+    return true;  
+  } else {
+    return false;
+  }
+}
+
+
 // This function clears the previously played game board
 function clearPrevGrid(){
   // Select all the squares
@@ -150,7 +362,9 @@ function clearPrevGrid(){
     squares[i].remove();
   }
   // Clear any remaining time on timer
-  if (timer) clearTimer(timer);
+  if (timer) {
+    clearTimeout(timer);
+  }
   // Deselect any numbers still selected
   for (let i = 0; i < id("number-selector").children.length; i++) {
     id("number-selector").children[i].classList.remove("selected");
