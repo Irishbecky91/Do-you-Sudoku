@@ -206,7 +206,7 @@ function createGrid(grid) {
   // This creates 81 squares to fill the 9x9 grid of the game board
   for (let i = 0; i < 81; i++) {
     // This creates a new paragraph element
-    let square = document.createElement("div");
+    let square = document.createElement("p");
     // Checks the pre-defined game boards based on difficulty, to see if the squares should have numbers or be empty
     if (grid.charAt(i) != "-") {
       // Assign the correct number to the squares
