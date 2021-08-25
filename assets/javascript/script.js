@@ -10,8 +10,8 @@ const medium = [
 ];
 
 const hard = [
-"---6--4--7----36------91-8-----------5-18---3---3-6-45-4-2---6-9-3-------2----1--",
-"581672439792843651364591782438957216256184973179326845845219367913768524627435198"
+  "---6--4--7----36------91-8-----------5-18---3---3-6-45-4-2---6-9-3-------2----1--",
+  "581672439792843651364591782438957216256184973179326845845219367913768524627435198"
 ];
 
 const hardcore = [
@@ -69,7 +69,8 @@ function startNewGame() {
     grid = medium[0];
   } else if (id("hard-diff").checked) {
     grid = hard[0];
-  } else if (id("hardcore-diff").checked) {
+  } else if (id("hardcore-diff").checked)
+   {
     grid = hardcore[0];
   }
   // Set number of lives to five and enable selection of squares and numbers
@@ -228,7 +229,8 @@ function createGrid(grid) {
             }
             // Select square and update selectedSquare variable
             square.classList.add("selected");
-            selectedNumber = square;
+            console.log(square);
+            selectedSquare = square;
             updateSquare();
           }
         }
@@ -316,20 +318,6 @@ function checkGridComplete() {
 }
 
 
-// This function ends the game
-function gameOver() {
-  // Disables any further moves and stops the timer
-  noSelect = true;
-  clearTimeout(timer);
-  // Display a win or loss mesasge
-  if (lives === 0 || timeLeft === 0) {
-    id("lives").textContent = "Uh oh! You lost! Want to try again?"
-  } else {
-    id("lives").textContent = "Woohoo! You won! Want to try again?"
-  }
-}
-
-
 // Check if a number/square pair is correct when compared to the solution
 function checkIfCorrect(square) {
   // Assign the solution based on the difficulty setting chosen
@@ -371,6 +359,20 @@ function clearPrevGrid(){
   // Clear all selected variables
   selectedNumber = null;
   selectedSquare = null;
+}
+
+
+// This function ends the game
+function gameOver() {
+  // Disables any further moves and stops the timer
+  noSelect = true;
+  clearTimeout(timer);
+  // Display a win or loss message
+  if (lives === 0 || timeLeft === 0) {
+    id("lives").textContent = "Uh oh! You lost! Want to try again?";
+  } else {
+    id("lives").textContent = "Woohoo! You won! Want to try again?";
+  }
 }
 
 
