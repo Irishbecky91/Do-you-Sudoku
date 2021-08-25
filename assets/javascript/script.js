@@ -33,9 +33,9 @@ let noSelect;
 window.onload = function (){
   // Run the startgame function when the Start New Game button is clicked
   id("start-game-btn").addEventListener("click", startNewGame);
-  // Add event Listener to each number and number selector
+  // Add addEventListener to each square and number selector
   for (let i = 0; i < id("number-selector").children.length; i++) {
-    id("number-selector").children[i].addEventListener("click", function(){
+    id("number-selector").children[i].addEventListener("click", function() {
       // If number selection is not disabled
       if (!noSelect) {
         // If the number is already selected
@@ -45,7 +45,7 @@ window.onload = function (){
           selectedNumber = null;
         } else {
           // Deselect all other selected numbers 
-          for (let i = 0; i < 9; i++) {
+          for (let i = 0; i < id("number-selector").children.length; i++) {
             id("number-selector").children[i].classList.remove("selected");
           }
           // Select number and update selectedNumber variable
@@ -260,6 +260,7 @@ function updateMoveNum() {
   if (selectedSquare && selectedNumber) {
     // Assign the chosen number to the chosen square
     selectedSquare.textContent = selectedNumber.textContent;
+    console.log("Can you see me?");
     // If the number matches the number in the solution key
     if (checkIfCorrect(selectedSquare)){
       // Deselect the selected square and number selector

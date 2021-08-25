@@ -228,10 +228,9 @@ div#grid {
   align-content: flex-start;
   width: 540px;
   height: 540px;
-  cursor: pointer;
 }
 
-div.square {
+p.square {
   border: 1px solid black;
   width: 60px;
   height: 60px;
@@ -240,15 +239,16 @@ div.square {
   padding-top: 5px;
   font-size: 40px;
   background-color: beige;
+  cursor: pointer;
 }
 
 div#number-selector > p.selected {
-  background-color: bisque;
+  background-color: lightcoral;
   color: #333;
 }
 
-div#grid > div.selected {
-  background-color: bisque;
+div#grid > p.selected {
+  background-color: lightcoral;
   color: #333;
 }
 
@@ -256,11 +256,11 @@ p.incorrect {
   color: red;
 }
 
-div.rightBorder {
+p.rightBorder {
   border-right: 4px solid black;
 }
 
-div.bottomBorder {
+p.bottomBorder {
   border-bottom: 4px solid black;
 }
 
