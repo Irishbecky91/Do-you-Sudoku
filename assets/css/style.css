@@ -253,6 +253,7 @@ div#grid > p.selected {
 }
 
 p.incorrect {
+  background-color: #333;
   color: red;
 }
 

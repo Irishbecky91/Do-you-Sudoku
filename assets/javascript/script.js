@@ -51,7 +51,7 @@ window.onload = function (){
           // Select number and update selectedNumber variable
           this.classList.add("selected");
           selectedNumber = this;
-          updateMoveNum();
+          updateSquare();
         }
       }
     });
@@ -229,7 +229,7 @@ function createGrid(grid) {
             // Select square and update selectedSquare variable
             square.classList.add("selected");
             selectedNumber = square;
-            updateMoveNum();
+            updateSquare();
           }
         }
       });
@@ -255,12 +255,11 @@ function createGrid(grid) {
 
 
 // This function assigns the chosen number to a square if correct, or removes a life if incorrect
-function updateMoveNum() {
+function updateSquare() {
   // If a square and a number are both selected
   if (selectedSquare && selectedNumber) {
     // Assign the chosen number to the chosen square
     selectedSquare.textContent = selectedNumber.textContent;
-    console.log("Can you see me?");
     // If the number matches the number in the solution key
     if (checkIfCorrect(selectedSquare)){
       // Deselect the selected square and number selector
@@ -270,23 +269,22 @@ function updateMoveNum() {
       selectedNumber = null;
       selectedSquare = null;
       // Check if the game board is completed
-      if (checkBoardComplete()) {
+      if (checkGridComplete()) {
         gameOver();
       }
     } else { // Check if the number does not match the solution key
-      // Disallow selecting new numbers for one full second
+      // Disallow selecting new numbers for half a second
       noSelect = true;
-      // Turn the selected square red
+      // Turn the selected square dark with red text 
       selectedSquare.classList.add("incorrect");
-      // Run for one second
+      // Run after half a second
       setTimeout(function() {
         // Take 1 from lives
         lives --;
         // If user runs out of lives
         if (lives === 0) {
           gameOver();
-        } else {
-          // If there are lives remaining
+        } else { // If there are lives remaining
           // Update the remaining lives section with current lives
           id("lives").textContent = "Remaining Lives: " + lives;
           // Allow number and square selection
@@ -307,7 +305,7 @@ function updateMoveNum() {
 
 
 // This function checks if every square of the game board is filled, meaning the user has won
-function checkBoardComplete() {
+function checkGridComplete() {
   let squares = qsa(".square");
   for (let i = 0; i < squares.length; i++) {
     if (squares[i].textContent === "") {
