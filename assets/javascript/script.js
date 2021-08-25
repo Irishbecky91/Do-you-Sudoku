@@ -63,13 +63,13 @@ window.onload = function (){
 function startNewGame() {
   // Select game board difficulty
   let grid;
-  if (id("easy-diff").click) {
+  if (id("easy-diff").checked) {
     grid = easy[0];
-  } else if (id("medium-diff").click) {
+  } else if (id("medium-diff").checked) {
     grid = medium[0];
-  } else if (id("hard-diff").click) {
+  } else if (id("hard-diff").checked) {
     grid = hard[0];
-  } else if (id("hardcore-diff").click) {
+  } else if (id("hardcore-diff").checked) {
     grid = hardcore[0];
   }
   // Set number of lives to five and enable selection of squares and numbers
