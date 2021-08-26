@@ -21,12 +21,12 @@ const hardcore = [
 
 
 // Define Variables
-let timer;
-let timeLeft;
-let lives;
-let selectedNumber;
-let selectedSquare;
-let noSelect;
+let timer;  // The timer shown in the stats div
+let timeLeft;  // The remaining time within the timer
+let lives;  // The remaining lives shown in the stats div
+let selectedNumber;  // The number selected within the number-selector div
+let selectedSquare;  // The square selected within the grid div
+let noSelect;  // This disables the selection of the selectedNumber and selectedSquare
 
 
 // This only allows the code to run when window is fully loaded
@@ -308,14 +308,20 @@ function updateSquare() {
 
 // This function checks if every square of the game board is filled, meaning the user has won
 function checkGridComplete() {
+  // Make an array of all squares in the grid to look through
   let squares = qsa(".square");
+  // Make an empty array to store empty squares in
   let emptySquares = [];
   for (let i = 0; i < squares.length; i++) {
+    // Define a variable to show the content of the squares within the squares array
     let squareContent = squares[i].textContent;
+    // If the sqaure's content is an empty string
     if (squareContent === "") {
+      // All empty squares are pushed onto the emptySquares array
       emptySquares.push(squareContent);
     }
   }
+  // If the array is empty, the game is won. Else the game continues
   if (emptySquares.length === 0) {
     return true;
   } else {
