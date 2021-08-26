@@ -229,7 +229,6 @@ function createGrid(grid) {
             }
             // Select square and update selectedSquare variable
             square.classList.add("selected");
-            console.log(square);
             selectedSquare = square;
             updateSquare();
           }
@@ -273,6 +272,7 @@ function updateSquare() {
       // Check if the game board is completed
       if (checkGridComplete()) {
         gameOver();
+
       }
     } else { // Check if the number does not match the solution key
       // Disallow selecting new numbers for half a second
@@ -309,11 +309,17 @@ function updateSquare() {
 // This function checks if every square of the game board is filled, meaning the user has won
 function checkGridComplete() {
   let squares = qsa(".square");
+  let emptySquares = [];
   for (let i = 0; i < squares.length; i++) {
-    if (squares[i].textContent === "") {
-      return false;
+    let squareContent = squares[i].textContent;
+    if (squareContent === "") {
+      emptySquares.push(squareContent);
     }
+  }
+  if (emptySquares.length === 0) {
     return true;
+  } else {
+    return false;
   }
 }
 
