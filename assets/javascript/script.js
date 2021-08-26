@@ -86,69 +86,69 @@ function startNewGame() {
     // Remove unwanted themes from list and adds light theme
     // Body
     qs("body").classList.remove("dark");
-    qs("body").classList.remove("tech");
+    qs("body").classList.remove("coffee");
     qs("body").classList.remove("unicorn");
     qs("body").classList.add("light");
     // Header
     qs("header").classList.remove("dark");
-    qs("header").classList.remove("tech");
+    qs("header").classList.remove("coffee");
     qs("header").classList.remove("unicorn");
     qs("header").classList.add("light");
     // Footer
     qs("footer").classList.remove("dark");
-    qs("footer").classList.remove("tech");
+    qs("footer").classList.remove("coffee");
     qs("footer").classList.remove("unicorn");
     qs("footer").classList.add("light");
   } else if (id("theme-2").checked) {
     // Remove unwanted themes from list and adds dark theme
     // Body
     qs("body").classList.remove("light");
-    qs("body").classList.remove("tech");
+    qs("body").classList.remove("coffee");
     qs("body").classList.remove("unicorn");
     qs("body").classList.add("dark");
     // Header
     qs("header").classList.remove("light");
-    qs("header").classList.remove("tech");
+    qs("header").classList.remove("coffee");
     qs("header").classList.remove("unicorn");
     qs("header").classList.add("dark");
     // Footer
     qs("footer").classList.remove("light");
-    qs("footer").classList.remove("tech");
+    qs("footer").classList.remove("coffee");
     qs("footer").classList.remove("unicorn");
     qs("footer").classList.add("dark");
   } else if (id("theme-3").checked) {
-    // Remove unwanted themes from list and adds tech theme
+    // Remove unwanted themes from list and adds coffee theme
     // Body
     qs("body").classList.remove("light");
     qs("body").classList.remove("dark");
     qs("body").classList.remove("unicorn");
-    qs("body").classList.add("tech");
+    qs("body").classList.add("coffee");
     // Header
     qs("header").classList.remove("light");
     qs("header").classList.remove("dark");
     qs("header").classList.remove("unicorn");
-    qs("header").classList.add("tech");
+    qs("header").classList.add("coffee");
     // Footer
     qs("footer").classList.remove("light");
     qs("footer").classList.remove("dark");
     qs("footer").classList.remove("unicorn");
-    qs("footer").classList.add("tech");
+    qs("footer").classList.add("coffee");
   } else if (id("theme-4").checked) {
 // Remove unwanted themes from list and adds unicorn theme
     // Body
     qs("body").classList.remove("light");
     qs("body").classList.remove("dark");
-    qs("body").classList.remove("tech");
+    qs("body").classList.remove("coffee");
     qs("body").classList.add("unicorn");
     // Header
     qs("header").classList.remove("light");
     qs("header").classList.remove("dark");
-    qs("header").classList.remove("tech");
+    qs("header").classList.remove("coffee");
     qs("header").classList.add("unicorn");
     // Footer
     qs("footer").classList.remove("light");
     qs("footer").classList.remove("dark");
-    qs("footer").classList.remove("tech");
+    qs("footer").classList.remove("coffee");
     qs("footer").classList.add("unicorn");
   }
   // Show the number selector
