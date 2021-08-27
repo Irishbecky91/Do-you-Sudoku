@@ -239,3 +239,20 @@ Each page within the site has a consistent and responsive navigation system. The
      - **Reason for not featuring in this release** - A lack of experience and time prevented the developer from making this feature upon release. This feautre will be developed and implemented in the future to improve repeat play by users.
 
 [Back to top ⇧](#)
+
+## Issues and Bugs 
+The developer ran into several issues during the development of the website, with the noteworthy ones listed below, along with solutions or ideas to implement in the future.
+
+**Grid Difficulty Bug** - A bug was detected early in development as the numbers on the grid did not change when other difficulties weere selected. It was found the developer had used .click instead of .checked when coding the event handler. Once changed, the problem was resolved.
+
+**Square Selection Bug** - A bug was detected where an empty square, when clicked on, did not register the click. The cause of this was found to be a mislabelling of an element. Instead of a "p" element, the selected class in css should have been a "div element. Once this and the square's element was changed to a div, the problem was resolved.
+
+**Number Transfer Bug** - A bug was detected which affected the squares, causing the number chosen in the number selector to not transfer to the selected square. The problem was the variable selected on line 232 was incorrect, selectedNumber was used insetead of selectedSquare. Once this was replaced for the correct variable, the issue was resolved.
+
+**Game Won Early Bug** - A bug was detected when playing the game as the game would complete a win sequence early if the first available square was filled in before any others. The problem was the function checkGridComplete was only checking to see if the first square in the grid was filled in correctly. This required a complete reworking of the function, creating an empty array to check for and store empty squares. Once the array is emptied, the game is won. This was the final bug which has now been rectified.
+
+[Back to top ⇧](#)
+
+
+
+[Back to top ⇧](#)

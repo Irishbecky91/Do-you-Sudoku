@@ -276,7 +276,7 @@ div#grid > p.selected {
   color: #333;
 }
 
-p.incorrect {
+div.incorrect {
   background-color: #333;
   color: red;
 }
