@@ -459,7 +459,7 @@ Manual testing was conducted on all three site pages for responsiveness:
 ## Automated Testing
 
 ### Code Validation
-The [W3C Markup Validator](https://validator.w3.org/) service was used to validate the `HTML` and `CSS` code used.
+The [W3C Markup Validator](https://validator.w3.org/) service was used to validate the `HTML` and `CSS` code used. The [JSHint JavaScript Code Quality Tool](https://jshint.com/) was also used to validate the sites `JS` code.
 
 **Results:**
 
