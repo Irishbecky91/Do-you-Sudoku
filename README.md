@@ -162,7 +162,7 @@ The ![image](assets/readme-files/maki-kaji-portrait.png) on the home page was so
 Each page within the site has a consistent and responsive navigation system. The details of features on the site are detailed below.
 - The **Header** is across the top of the page. It is not static as this would cover too much of the screen.
 - The **Navigation Bar** is positioned directly below the header.
-- The **Footer** stays at the bottom of the screen at all times, on all screen sizes. Both social media links opens in a new tab. Additionally, both links opens to Rebecca Rayner's profiles in LinkedIn and GitHub.
+- The **Footer** stays at the bottom of the screen at all times, on all screen sizes. Both social media links on the footer open in a new tab. Additionally, both links opens to the developer's profiles in LinkedIn and GitHub. The icons are positioned on either side of some text showing "Created by Rebecca Rayner".
 
 <dl>
     <dt><a href="https://irishbecky91.github.io/Do-you-Sudoku/index.html" target="_blank" alt="Home Page">Home Page</a></dt>
@@ -224,3 +224,25 @@ Each page within the site has a consistent and responsive navigation system. The
         </ul>
     </dd>
 </dl>
+
+### Existing Features
+- **Header** - Appearing on every page for brand recognition.
+- **Navigation Bar** - Appearing on every page for a consistently easy and intuitive navigable system.
+- **Social Media Icons** - Appearing on every page, the icons are appropriate representations of the Social Media platforms, linking users to the developers GitHub and LinkedIn accounts. The icons appear in the centre of the footer, on either side of some text.
+- **Youtube Embed** - Videos relating to the content on the Survival Tips Page and the Camp Setup Page have been embedded. These videos were embedded to emphasise the content and provide additional information relating to the content.
+- **Google Maps Embed** - iframe embedding of Google maps, showing the location of Northern Ireland's Secret Bunker was added to the Contact Page. The map is resized depending on the screen size to ensure the readability of the page on mobile devices.
+- **Contact Form** - A contact form is used in the Contact Page, to provide a point of contact for the user.
+- **404 page** - A 404 page providing a unique user experience in the form of a mini-game/story redirects the user to the home page or, if the user chooses, to additional story pages to continue the experience.
+- **500 page** - A 500 page providing a unique user experience in the form of a mini-game/story redirects the user to the home page or, if the user chooses, to additional story pages to continue the experience.
+- **[Survival Tips Page](survival-tips.html "Survival Guild - Survival Tips Page")** - Providing survival tips for the users to get an understanding of how to survive the apocalypse.
+- **[Camp Setup Page](camp-setup.html "Survival Guild - Camp Setup Page")** - Providing camp setup tips for the users to get an understanding of setting up a strong and safe camp during the apocalypse.
+- **[The Infected Page](infected.html "Survival Guild - The Infected Page")** - Providing information relating to the Infected and how to defend yourself against them.
+- **[Contact Page](contact.html "Survival Guild - Contact Page")** - Providing contact details for the Survival Guild, a map to Northern Ireland's Secret Bunker, and a form allowing the user to enter the Survival Guild.
+- **[Competition Page](competition.html "Survival Guild - Competition Page")** - Providing details for the Survival Guild's competition, a terms and conditions box, and a form allowing the user to enter the Survival Guild's competition.
+
+### Features to Implement in the future
+- **Helpful Links Page**
+     - **Feature** - create a page with links to external sites where users can purchase the items discussed on the various pages.
+     - **Reason for not featuring in this release** - Not enough time to create this page before the submission date.
+
+[Back to top](#Survival-Guild)
