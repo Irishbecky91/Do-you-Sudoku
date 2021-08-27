@@ -1,8 +1,8 @@
 # Do You Sudoku?
 
-![Do You Sudoku? Mockup Images](assets/readme-files/do-you-sudoku.PNG)
+![Do You Sudoku? Mockup Images](assets/readme-files/responsive-site.PNG)
 
-[View the live project here](https://irishbecky91.github.io/do-you-sudoku/)
+[View the live project here](https://irishbecky91.github.io/Do-you-Sudoku/)
 
 ## Table of contents
 1. [Introduction](#Introduction)
