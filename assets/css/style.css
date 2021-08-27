@@ -165,14 +165,13 @@ div#game-options {
 }
 
 div#game-options > * {
-  padding: 0 50px;
   display: flex;
   align-items: center;
 }
 
 div#game-options h2 {
   font-size: 20px;
-  padding: 10px;
+  padding-right: 10px;
 }
 
 /* Difficulty Settings Styling */
@@ -302,8 +301,8 @@ footer {
   font-size: 20px;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: row;
-  padding-top: 20px;
   position: fixed;
 }
 
@@ -405,16 +404,38 @@ footer.unicorn {
 
 
 /* Add responsiveness - screens 1200 pixels and less */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1250px) {
   div.intro {
     display: flex;
     flex-direction: column;
     font-family: "Roboto", sans-serif;
   }
+
+  div#game-options {
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    padding-left: 0;
+    flex-wrap: wrap;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    max-height: 90px;
+  }
+
+  div#game-options h2 {
+    padding: 0 10px 0 0;
+    margin: 0;
+  }
+
+  div#game-options label, 
+  div#game-options input
+  {
+    padding-top: 10px;
+  }
 }
 
 
-/* Add responsiveness - screens 900 px and less */
+/* Add responsiveness - screens 900 pixels and less */
 @media screen and (max-width: 900px) {
   .navbar a {
     float: none;
@@ -438,9 +459,15 @@ footer.unicorn {
   }
 }
 
+/* Add responsiveness - screens 838 pixels and less */
+@media screen and (max-width: 838px) {
+  div#game-options {
+    max-height: 135px;
+  }
+}
 
-/* Add responsiveness - screens 500 pixels and less */
-@media screen and (max-width: 500px) {
+/* Add responsiveness - screens 550 pixels and less */
+@media screen and (max-width: 550px) {
   header {
     height: 75px;
   }
@@ -467,4 +494,88 @@ footer.unicorn {
     margin: 10px;
   }
 
+  div#game-options h2 {
+    font-size: 16px;
+  }
+
+  div#game-options label {
+    padding-right: 2px;
+    font-size: 14px;
+  }
+
+  div#game-options input {
+    margin-right: 4px;
+    margin-top: 10px;
+  }
+
+  div#theme,
+  div#difficulty,
+  div#game-time {
+    margin-left: 10px;
+  }
+
+  button#start-game-btn {
+    margin-bottom: 15px;
+    font-size: 20px;
+    border-radius: 15px;
+    padding: 5px 10px;
+  }
+
+  p#timer, p#lives {
+    font-size: 16px;
+  }
+
+  div#grid {
+    padding-top: 10px;
+    margin-top: 10px;
+    width: 306px;
+    height: 306px;
+  }
+  
+  p.square {
+    width: 34px;
+    height: 34px;
+    padding-top: 3.5px;
+    font-size: 20px;
+  }
+
+  div#number-selector {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    margin-bottom: 80px;
+  }
+
+  div#number-selector > p {
+    border-radius: 10%;
+    width: 34px;
+    height: 34px;
+    font-size: 20px;
+    padding-top: 4px;
+    margin: 0;
+  }
+
+  div#game {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  footer {
+    height: 40px;
+    font-size: 16px;
+  }
+  
+  div#github-icon a {
+    font-size: 16px;
+    bottom: 5px;
+    margin-right: 15px;
+    margin-left: 0;
+  }
+  
+  div#linkedin-icon a {
+    font-size: 16px;
+    bottom: 5px;
+    margin-left: 15px;
+    margin-right: 0;
+  }
 }
