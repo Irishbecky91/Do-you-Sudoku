@@ -225,7 +225,7 @@ div#game{
 }
 
 div#number-selector {
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 
 div#number-selector > p {
@@ -474,6 +474,16 @@ footer.unicorn {
 
   header > h1, i#logo {
     font-size: 25px;
+  }
+
+  div.img-div img {
+    width: 100%;
+  }
+  
+  div.intro-text {
+    width: 90%;
+    padding-top: 20px;
+    margin-bottom: 40px;
   }
 
   div#instructions {
