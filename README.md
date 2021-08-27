@@ -38,7 +38,7 @@
 
 ## Introduction
 
-This website was made to allow the user to play sudoku using a range of difficulty settings. In addition to this, the site was also created as a dedication to the life of Maki Kaji, the "Father of Sudoku". Maki recently passed away from cancer on August 10th 2021.
+This website was made to allow the user to play sudoku using a range of difficulty settings. In addition to this, the site was also created as a dedication to the life of Maki Kaji, the "Father of Sudoku". Kaji recently passed away from cancer on August 10th 2021.
 
 This website was made for the second of five Milestone projects required to complete the Diploma in Software development (eCommerce Applications) program at The Code Institute. 
 
@@ -332,7 +332,7 @@ Manual testing was conducted on the following elements that appear on every page
 - Hovering over the Navigation bar elements will trigger the `hover` effect, highlighting the icon for the user.
 
 <details>
-<summary>Strategy Plane - Viability/Feasibility Table</summary>
+<summary>Navbar hover effect</summary>
 
 ![Navbar hover effect](assets/testing-files/navbar-hover.gif)
 
@@ -341,7 +341,7 @@ Manual testing was conducted on the following elements that appear on every page
 - Clicking on the Navigation Bar's links will bring the user to the specified page.
 
 <details>
-<summary>Strategy Plane - Viability/Feasibility Table</summary>
+<summary>Navbar page links</summary>
 
 ![Navbar page links](assets/testing-files/navbar-function.gif)
 
@@ -352,7 +352,7 @@ Manual testing was conducted on the following elements that appear on every page
   LinkedIn:
 
 <details>
-<summary>Strategy Plane - Viability/Feasibility Table</summary>
+<summary>LinkedIn Social Media link</summary>
 
 ![LinkedIn Social Media link](assets/testing-files/linkedin.gif)
 
@@ -361,7 +361,7 @@ Manual testing was conducted on the following elements that appear on every page
   GitHub:
 
 <details>
-<summary>Strategy Plane - Viability/Feasibility Table</summary>
+<summary>GitHub Social Media link</summary>
 
 ![GitHub Social Media link](assets/testing-files/github.gif)
 
@@ -373,7 +373,7 @@ Manual testing was conducted on the following elements of the [Game Page](https:
 - Clicking the Start New Game button will create a new grid using the user's chosen settings.
 
 <details>
-<summary>Strategy Plane - Viability/Feasibility Table</summary>
+<summary>Start New Game Button - Game Page</summary>
 
 ![Start New Game Button - Game Page](assets/testing-files/start-btn.gif)
 
@@ -382,7 +382,7 @@ Manual testing was conducted on the following elements of the [Game Page](https:
 - Selecting the different difficulties changes the layout of the grid.
 
 <details>
-<summary>Strategy Plane - Viability/Feasibility Table</summary>
+<summary>Difficulty Grid Layouts - Game Page</summary>
 
 ![Difficulty Grid Layouts - Game Page](assets/testing-files/grid-layout.gif)
 
@@ -391,7 +391,7 @@ Manual testing was conducted on the following elements of the [Game Page](https:
 - Selecting the different time settings will change the length of the timer.
 
 <details>
-<summary>Strategy Plane - Viability/Feasibility Table</summary>
+<summary>Timer Settings - Game Page</summary>
 
 ![Timer Settings - Game Page](assets/testing-files/timer.gif)
 
@@ -400,7 +400,7 @@ Manual testing was conducted on the following elements of the [Game Page](https:
 - Selecting a square in the grid and a number in the number selector moves that number to the chosen square.
 
 <details>
-<summary>Strategy Plane - Viability/Feasibility Table</summary>
+<summary>Assign Number To Square - Game Page</summary>
 
 ![Assign Number To Square - Game Page](assets/testing-files/assign-number.gif)
 
@@ -409,7 +409,7 @@ Manual testing was conducted on the following elements of the [Game Page](https:
 - When an incorrect number is assigned to a box, the user loses a life.
 
 <details>
-<summary>Strategy Plane - Viability/Feasibility Table</summary>
+<summary>Lose A Life - Game Page</summary>
 
 ![Lose A Life - Game Page](assets/testing-files/lives.gif)
 
@@ -418,7 +418,7 @@ Manual testing was conducted on the following elements of the [Game Page](https:
 - Show the win and lose messages when the game ends.
 
 <details>
-<summary>Strategy Plane - Viability/Feasibility Table</summary>
+<summary>Game Over - Game Page</summary>
 
 ![Game Over - Game Page](assets/testing-files/game-over.gif)
 
@@ -430,7 +430,7 @@ Manual testing was conducted on all three site pages for responsiveness:
 - Responsivenss of Home Page.
 
 <details>
-<summary>Strategy Plane - Viability/Feasibility Table</summary>
+<summary>Resposiveness - Home Page</summary>
 
 ![Resposiveness - Home Page](assets/testing-files/responsive-home.gif)
 
@@ -439,7 +439,7 @@ Manual testing was conducted on all three site pages for responsiveness:
 - Responsivenss of Instructions/Rules Page.
 
 <details>
-<summary>Strategy Plane - Viability/Feasibility Table</summary>
+<summary>Resposiveness - Rules Page</summary>
 
 ![Resposiveness - Rules Page](assets/testing-files/responsive-rules.gif)
 
@@ -448,7 +448,7 @@ Manual testing was conducted on all three site pages for responsiveness:
 - Responsivenss of Game Page.
 
 <details>
-<summary>Strategy Plane - Viability/Feasibility Table</summary>
+<summary>Resposiveness - Game Page</summary>
 
 ![Resposiveness - Game Page](assets/testing-files/responsive-game.gif)
 
@@ -466,7 +466,7 @@ The [W3C Markup Validator](https://validator.w3.org/) service was used to valida
 - Home Page
 
 <details>
-<summary>Strategy Plane - Viability/Feasibility Table</summary>
+<summary>Home Page HTML Validation Results</summary>
 
 ![Home Page HTML Validation Results](assets/testing-files/validate-html-home.gif)
 
@@ -475,7 +475,7 @@ The [W3C Markup Validator](https://validator.w3.org/) service was used to valida
 - Rules Page
 
 <details>
-<summary>Strategy Plane - Viability/Feasibility Table</summary>
+<summary>Rules Page HTML Validation Results</summary>
 
 ![Rules Page HTML Validation Results](assets/testing-files/validate-html-rules.gif)
 
@@ -484,7 +484,7 @@ The [W3C Markup Validator](https://validator.w3.org/) service was used to valida
 - Game Page
 
 <details>
-<summary>Strategy Plane - Viability/Feasibility Table</summary>
+<summary>Game Page HTML Validation Results</summary>
 
 ![Game Page HTML Validation Results](assets/testing-files/validate/validate-html-game.gif)
 
@@ -493,7 +493,7 @@ The [W3C Markup Validator](https://validator.w3.org/) service was used to valida
 - CSS stylesheet
 
 <details>
-<summary>Strategy Plane - Viability/Feasibility Table</summary>
+<summary>Style sheet Validation results</summary>
 
 ![Style sheet Validation results](assets/testing-files/validate-css.gif)
 
@@ -502,7 +502,7 @@ The [W3C Markup Validator](https://validator.w3.org/) service was used to valida
 - JavaScript 
 
 <details>
-<summary>Strategy Plane - Viability/Feasibility Table</summary>
+<summary>JavaScript Validation results</summary>
 
 ![JavaScript Validation results](assets/testing-files/validate-js.gif)
 
