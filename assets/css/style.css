@@ -172,6 +172,7 @@ div#game-options > * {
 div#game-options h2 {
   font-size: 20px;
   padding-right: 10px;
+  font-family: "Roboto", sans-serif;
 }
 
 /* Difficulty Settings Styling */
@@ -313,11 +314,19 @@ div#github-icon a {
   margin: 0 40px;
 }
 
+div#github-icon a:hover {
+  color: rgb(248, 174, 77);
+}
+
 div#linkedin-icon a {
   color: bisque;
   font-size: 20px;
   bottom: 5px;
   margin: 0 40px;
+}
+
+div#linkedin-icon a:hover {
+  color: rgb(248, 174, 77);
 }
 
 
